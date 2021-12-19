@@ -122,12 +122,12 @@ p.login_left_description {
   padding: 4px 0;
 }
 .sign_up_form_sign {
-  background-color: var(--btn-primary);
+  background-color: var(--btn-hover);
   color: white;
   padding: 0.5rem 1.5rem;
 }
 .login_form_sign {
-  background-color: var(--btn-primary);
+  background-color: var(--btn-hover);
   color: white;
 
   padding: 0.5rem 1.5rem;
