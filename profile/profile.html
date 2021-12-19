@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel="icon" href="img/tl.png">
+    <title>Profile</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylee.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./profile.css'>
+
+</head>
+
+<body>
+    <div class="profile_cover">
+        <img id="profileCover" src="../assest/image/2.jpg">
+        <button id="coverModal" class="btn"> <i class="fa fa-camera cover-button"></i>Edit Cover Photo</button>
+    </div>
+    <div class="container">
+        <div class="profile_right_side">
+            <div class="img-cont">
+                <img id="ProfileImg" src="../assest/image/profile.jpg">
+                <button id="edit-profile" class="btn">Edit Profile</button>
+            </div>
+            <div class="profile_data">
+                <p class="grayTxt">5 Following</p>
+                <p id="profileFolowing"></p>
+            </div>
+            <div class="profile_data">
+                <p class="grayTxt">10 Followers</p>
+                <p id="profileFollowers"></p>
+            </div>
+            <div class="profile_data profile_social_side">
+                <p>
+                    <i class="fa fa-facebook-square" style="color: #0c7596;"></i>
+
+                    <a id="facebook" href="https://www.facebook.com/profile.php?id=100005245264775">lina AHmed</a>
+
+                </p>
+            </div>
+            <div class="profile_data  profile_social_side">
+                <p>
+                    <i class="fa fa-github-square" style="color: #560f63;"></i>
+
+                    <a id="github" href="https://github.com/leenaAhmed">leenaAhmed</a>
+
+                </p>
+            </div>
+            <div class="profile_data  profile_social_side">
+                <p>
+                    <i class="fa fa-linkedin-square" style="color: #d2664c;"></i>
+
+                    <a id="linkedin" href="https://www.linkedin.com/in/lina-ahmed98/">lina ahmed98</a>
+
+                </p>
+            </div>
+        </div>
+        <div class="profile_top_info timeline">
+            <div>
+                <h2 id="UserFullName"> Lina Ahmed</h2>
+                <h4 class="grayTxt" id="UserTrack"> front-end&& cross platform</h4>
+            </div>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#myposts">
+                            <i class="fa fa-newspaper-o"></i>
+                            <i>Feed</i>
+                        </a></li>
+                    <li><a href="#myinfo">
+                            <i class="fa fa-info-circle"></i>
+                            <i>Info</i>
+                        </a></li>
+                    <!-- <li><a href="#tabs-3">Aenean lacinia</a></li> -->
+                </ul>
+                <div class="clearfix"></div>
+                <div id="myposts" class="myposts">
+
+                </div>
+                <div id="profile_info" class="">
+                    <div class="post line-div">
+                        <h3>Overview</h3>
+
+                        <p id="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam
+                            felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur
+                            tincidunt. Vivamus consectetur aliquam lectus commodo viverra. Nunc eu augue nec arcu
+                            efficitur faucibus. Aliquam accumsan ac magna convallis bibendum. Quisque laoreet augue eget
+                            augue fermentum scelerisque. Vivamus dignissim mollis est dictum blandit. Nam porta auctor
+                            neque sed congue. Nullam rutrum eget ex at maximus. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Donec eget vestibulum lorem.</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h4>Choose cover photo</h4>
+                <div class="imgs">
+                    <label>
+                        <input type="radio" name="cvr" value="img/c1.jpg" checked>
+                        <img src="img/c1.jpg">
+                    </label>
+
+                    <label>
+                        <input type="radio" name="cvr" value="img/c2.jpg">
+                        <img src="img/c2.jpg">
+                    </label>
+                    <label>
+                        <input type="radio" name="cvr" value="img/c3.jpg" checked>
+                        <img src="img/c3.jpg">
+                    </label>
+
+                    <label>
+                        <input type="radio" name="cvr" value="img/c4.jpg">
+                        <img src="img/c4.jpg">
+                    </label>
+                    <label>
+                        <input type="radio" name="cvr" value="img/c5.jpg">
+                        <img src="img/c5.jpg">
+                    </label>
+                    <label>
+                        <input type="radio" name="cvr" value="img/c6.jpg">
+                        <img src="img/c6.jpg">
+                    </label>
+                </div>
+                <button class="btn" onclick="selectCover()">Select</button>
+            </div>
+        </div>
+        <!-- end modal -->
+        <!-- edit profile modal -->
+        <div id="editModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content edit-modal-content">
+                <span class="close">&times;</span>
+                <h4>Edit profile details</h4>
+                <div class="editform">
+                    <table>
+                        <tr>
+                            <td><label>First Name</label></td>
+                            <td><input id="FnameEdite" type="text" name="Fname"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Last Name</label></td>
+                            <td><input id="LnameEdite" type="text" name="Lname"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Email</label></td>
+                            <td><input id="emailEdite" type="email" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Bio</label></td>
+                            <td><textarea id="bioEdite" name="bio"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label>Profile Image</label></td>
+                            <td><input type="file" accept="image/*" class="EditProfileImg" name="ProfileImg"></td>
+                        </tr>
+                    </table>
+
+                </div>
+                <button class="btn" id="editProfileBtn">Edit</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

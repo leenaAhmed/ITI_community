@@ -1,12 +1,74 @@
 :root {
-  --layout-primary: #fff;
+  --layout-primary: #e9e6e6;
   --layout-secondary: #0a111a;
   --text-primary: #242627;
   --text-secondary: #0a111a;
   --background-secondary: #0a111a;
   --btn-hover: #024b88;
 }
-h1 {
-  background-color: var(--layout-secondary);
-  color: var(--layout-primary);
+.clearfix {
+  content: "";
+  clear: both;
+  display: table;
+}
+body {
+  background: var(--layout-primary);
+  margin: 0px;
+  padding: 0px;
+  font-family: system-ui;
+}
+textarea {
+  outline: none !important;
+}
+.container {
+  width: 1170px;
+  margin: auto;
+}
+button:focus {
+  outline: 0;
+}
+a {
+  cursor: pointer;
+}
+.btn {
+  background-color: var(--layout-primary);
+  font-size: 18px;
+  padding: 5px 20px;
+  margin-top: 15px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px #8080807d;
+  color: rgb(10, 8, 8);
+}
+.img-cont {
+  position: relative;
+  top: -47px;
+  text-align: center;
+  display: block;
+}
+.grayTxt {
+  color: gray;
+}
+
+.profile-info {
+  width: 25%;
+  margin: 36px 0px;
+  min-height: 300px;
+}
+
+.profile_right_side .profile_data {
+  text-align: center;
+  border-top: 1px solid #e9e7e7;
+  font-size: 20px;
+}
+.profile-info .f a {
+  color: #cc625c;
+  font-weight: 500;
+}
+.grayTxt {
+  color: gray;
+}
+/* timeline */
+.timeline {
+  width: 60%;
 }

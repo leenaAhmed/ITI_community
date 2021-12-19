@@ -1,0 +1,172 @@
+.profile_cover {
+  height: 340px;
+  overflow: hidden;
+  position: relative;
+}
+.profile_cover img {
+  width: 100%;
+}
+.profile_cover .btn {
+  position: absolute;
+  right: 50px;
+  bottom: 20px;
+  padding: 14px;
+}
+.profile_cover .btn .cover-button {
+  padding-right: 10px;
+}
+/* side div */
+.profile_right_side img {
+  width: 190px;
+  height: 186px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.img-cont {
+  top: -110px;
+  margin-bottom: -89px;
+}
+.profile_right_side {
+  width: 23%;
+  background: #fff;
+  float: left;
+  box-shadow: 1px 1px 3px #8080807d;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.profile_right_side .profile_data a {
+  font-size: 12px;
+  color: cornflowerblue;
+  /* margin: 20px 0; */
+}
+.profile_right_side .profile_data a {
+  font-size: 12px;
+  color: cornflowerblue;
+  /* margin: 20px 0; */
+}
+.profile_data {
+  text-align: center;
+  border-top: 1px solid var(--layout-primary);
+  font-size: 20px;
+}
+.profile_data .profile_social_side {
+  text-align: left;
+  padding-left: 10px;
+}
+/* top info*/
+.profile_top_info {
+  margin: 16px 20px;
+  float: left;
+}
+.main-div {
+  display: inline-block;
+  width: 70%;
+}
+.timeline {
+  width: 60%;
+}
+.line-div {
+  padding: 20px;
+  margin: 20px 0px;
+  background: #f9fbfc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #8080807d;
+  min-height: 100px;
+}
+/* tabs */
+#tabs ul {
+  list-style: none;
+  margin-top: 6px;
+  margin-left: -40px;
+}
+#tabs ul li {
+  float: left;
+  margin: 10px;
+}
+#tabs a {
+  text-decoration: none;
+  color: #0000007a;
+  font-size: 17px;
+}
+#tabs a:focus {
+  outline: none !important;
+}
+#tabs a i {
+  display: block;
+}
+#tabs a i.fa {
+  font-size: 32px;
+}
+
+/* end tabs */
+/* modal */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: var(--layout-primary);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 65%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* checkbox */
+/* HIDE RADIO */
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type="radio"] + img {
+  cursor: pointer;
+  width: 32%;
+  height: 120px;
+}
+
+/* CHECKED STYLES */
+[type="radio"]:checked + img {
+  outline: 2px solid coral;
+}
+/* end modal */
+.edit-modal-content input,
+.edit-modal-content textarea {
+  padding: 5px;
+  border: 1px solid gray;
+  width: 250px;
+  margin: 8px;
+}
+.modal-content.edit-modal-content {
+  width: 40%;
+  padding: 20px 30px;
+}
