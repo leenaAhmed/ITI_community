@@ -6,7 +6,70 @@
   --background-secondary: #0a111a;
   --btn-hover: #024b88;
 }
+*
+{
+  padding: 0;
+  margin: 0;
+}
+body
+{ 
+  background-color: var(--layout-primary);
+  text-align: center;
+}
+#Container
+{ 
+  background-color: var(--layout-primary);
+  
+  
+}
 h1 {
   background-color: var(--layout-secondary);
   color: var(--layout-primary);
 }
+#head
+{
+  background-color: var(--background-secondary) ;
+  width: 100%;
+  /* height: 40px; */
+  
+  overflow: hidden;
+  
+}
+#head>#logohome
+{
+  float:left;
+  display: block;
+  padding-left: 120px ;
+  color: var(--layout-primary) ;
+  padding-top: 10px;
+  font-family: 'Anton', sans-serif;
+  font-size: 21px;
+  
+}
+#head>#nav_head
+{
+  float: right;
+  padding-right: 100px;
+  text-align: center;
+}
+#head>#nav_head>a
+{
+  float: left;
+  display: block;
+  color: var(--layout-primary) ; 
+  text-align: center;
+  padding: 14px 8px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Montserrat', sans-serif;
+}
+/* Change the color of links on hover */
+#head>#nav_head>a:hover {
+  background-color: var(--layout-primary);
+  color: var(--layout-secondary);
+}
+
+
+
+
+
