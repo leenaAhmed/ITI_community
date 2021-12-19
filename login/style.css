@@ -1,112 +1,138 @@
 @font-face {
-    font-family:myFont ;
-    src: url(../assest/fonts/GeraldinePersonalUseItalic-PK12m.ttf);
-}
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 18px;
+  font-family: myFont;
+  src: url(../assest/fonts/GeraldinePersonalUseItalic-PK12m.ttf);
 }
 
-.signUp_left,.login_left{
-    width: 45%;
-    float: left;
-    margin: 32px;
- 
+* {
+  font-size: 18px;
 }
 
-.signUp_left_name,.login_left_name{
-    padding: 18px 0;
-    font-size: 32px;
-
-}
-p.signUp_left_description,p.login_left_description{
-    margin: 12px 0;
-    font-size: 26px;
-}
- .color1{
-    color: rgb(22, 204, 204);
-    font-size: 26px;
-}
- .color2{
-    color: purple;
-    font-size: 26px;
-}
- .color3{
-    color: burlywood;
-    font-size: 26px;
+.signUp_left,
+.login_left {
+  width: 45%;
+  float: left;
+  margin: 32px;
 }
 
-.signUp_left_projectname ,.login_left_projectname{
-    color: rgb(128, 0, 0);
-    font-size: 70px;
-    text-align: center;
-    font-family: 'Moo Lah Lah', cursive;
-    letter-spacing: 4px;
-    
+.signUp_left_name,
+.login_left_name {
+  padding: 18px 0;
+  font-size: 32px;
+  font-family: itilogo, cursive;
 }
-.signUp_right,.login_right{
-    height: 100%;
-    float: left;
-    margin: 32px;
-    width: 45%;
-    border-left: 1px solid rgb(233, 227, 227);
+p.signUp_left_description,
+p.login_left_description {
+  margin: 12px 0;
+  font-size: 26px;
 }
-
-.signUp_right_button,.login_right_button{
-    direction: rtl;
+.color1 {
+  color: rgb(22, 204, 204);
+  font-size: 26px;
 }
-.signUp_right_button button,.sign_up_form_sign,.login_right_button button,.login_form_sign{
-    border: none;
-    padding:8px 16px;
+.color2 {
+  color: purple;
+  font-size: 26px;
 }
-.signUp_right_button .sign_in,.login_sign_up{
-   color: black;
-   background-color: white;
-}
-.signUp_right_button .sign_up,.login_sign_in{
-    color: white;
-    background-color: rgb(128, 0, 0);;
-}
-.signUp_right .sign_up_form ,.login_right .login_form{
-    margin: 38px;
-    width: 80%;
-}
-.login_right .login_form{
-    margin-top: 70px;
-}
-.signUp_right .sign_up_form p ,.login_right .login_form p{
-    width: 12%;
-    padding: 4px 0;
-    margin:32px 0;
-    border-bottom: 4px solid black;
-}
-.sign_up_form section,.login_form section{
-    margin-top: 16px;
-}
-.sign_up_form section:after,.login_form section:after{
-    content: "";
-    clear: both;
+.color3 {
+  color: burlywood;
+  font-size: 26px;
 }
 
-.sign_up_form_label,.login_form_label{
-    float: left;
-    width: 30%;
-   
+.signUp_left_projectname,
+.login_left_projectname {
+  color: var(--layout-secondary);
+  font-size: 70px;
+  text-align: center;
+  font-family: itilogo, cursive;
+  letter-spacing: 4px;
+}
+.signUp_right,
+.login_right {
+  height: 100%;
+  float: left;
+  margin: 32px;
+  width: 45%;
+  border-left: 1px solid rgb(51 46 46);
 }
 
-.sign_up_form_input input,.login_form_input input{
-    padding: 4px;
-    width: 60%;
-    
+.signUp_right_button,
+.login_right_button {
+  direction: rtl;
 }
-.sign_up_form_input select ,.login_form_input select{
-    width: 60%;
-    padding: 4px 0;
+.signUp_right_button button,
+.sign_up_form_sign,
+.login_right_button button,
+.login_form_sign {
+  border: none;
+  padding: 8px 16px;
 }
-.sign_up_form_sign , .login_form_sign{
-    background-color: rgb(2, 2, 94);
-    color: white;
-    margin-top: 40px;
+.signUp_right_button .sign_in,
+.login_sign_up {
+  color: black;
+  background-color: white;
+}
+.signUp_right_button .sign_up,
+.login_sign_in {
+  color: white;
+  background-color: rgb(128, 0, 0);
+}
+.signUp_right .sign_up_form,
+.login_right .login_form {
+  margin: 38px;
+  width: 80%;
+}
+.login_right .login_form {
+  margin-top: 70px;
+}
+.signUp_right .sign_up_form p,
+.login_right .login_form p {
+  width: 12%;
+  padding: 4px 0;
+  margin: 32px 0;
+  border-bottom: 4px solid black;
+}
+.sign_up_form section,
+.login_form section {
+  margin-top: 16px;
+}
+.sign_up_form section:after,
+.login_form section:after {
+  content: "";
+  clear: both;
+}
+
+.sign_up_form_label,
+.login_form_label {
+  float: left;
+  width: 30%;
+}
+
+.sign_up_form_input input,
+.login_form_input input {
+  padding: 4px;
+  width: 60%;
+  border: 0;
+  padding: 0.7rem 0.5rem;
+  border-color: #f5f6f7;
+  border-radius: 0.4rem 0.4rem;
+}
+.sign_up_form_input select,
+.login_form_input select {
+  width: 60%;
+  padding: 4px 0;
+}
+.sign_up_form_sign {
+  background-color: var(--btn-primary);
+  color: white;
+  padding: 0.5rem 1.5rem;
+}
+.login_form_sign {
+  background-color: var(--btn-primary);
+  color: white;
+
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  margin-top: 40px;
+  width: 100%;
+  border-radius: 50rem;
 }
