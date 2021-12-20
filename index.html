@@ -45,46 +45,66 @@
     </div>
     <div class="sign_up_form">
       <p>Sign up</p>
-      <section>
-        <aside class="sign_up_form_label"><label for="fname">First name </label></aside>
-        <aside class="sign_up_form_input"><input type="text" id="fname" name="firstname"></aside>
-      </section>
-      <section>
-        <aside class="sign_up_form_label"><label for="lname">Last name </label></aside>
-        <aside class="sign_up_form_input"><input type="text" id="lname" name="lastname"></aside>
-      </section>
-      <section>
-        <aside class="sign_up_form_label"><label for="Email">Email</label></aside>
-        <aside class="sign_up_form_input"> <input type="email" id="Email" name="Email"></aside>
-      </section>
-      <section>
-        <aside class="sign_up_form_label"><label for="track">Track</label></aside>
-        <aside class="sign_up_form_input">
-          <select id="track" name="track">
-            <option value="Full-Stack">Full Stack</option>
-            <option value="Front-end">Front-end</option>
-            <option value="back-end">Back-end</option>
-          </select>
-        </aside>
-      </section>
-      <section>
-        <aside class="sign_up_form_label"><label for="Passward">Passward</label></aside>
-        <aside class="sign_up_form_input"><input type="passward" id="Passward" name="Passward"></aside>
-      </section>
-      <section>
-        <aside class="sign_up_form_label"><label for="chek_Passward">Check Passward</label></aside>
-        <aside class="sign_up_form_input"> <input type="passward" id="check_Passward" name="Passward"></aside>
-      </section>
-      <section>
-        <aside class="sign_up_form_label"><label for="bio">BIO</label></aside>
-        <aside class="sign_up_form_input"> <input type="text" id="bio" name="bio"></aside>
-      </section>
-
-      <button class="sign_up_form_sign">Sign Up</button>
+      <form id="form">
+        <section>
+          <aside class="sign_up_form_label"><label for="fname">First name </label></aside>
+          <aside class="sign_up_form_input">
+            <input type="text" id="fname" name="firstname">
+            <small id="FnameMess"></small>
+          </aside>
+        </section>
+        <section>
+          <aside class="sign_up_form_label"><label for="lname">Last name </label></aside>
+          <aside class="sign_up_form_input">
+            <input type="text" id="lname" name="lastname">
+            <small id="LnameMess"></small>
+          </aside>
+        </section>
+        <section>
+          <aside class="sign_up_form_label"><label for="Email">Email</label></aside>
+          <aside class="sign_up_form_input">
+             <input type="email" id="Email" name="Email">
+             <small id="emailMess"></small>
+          </aside>
+        </section>
+        <section>
+          <aside class="sign_up_form_label"><label for="track">Track</label></aside>
+          <aside class="sign_up_form_input">
+            <select id="track" name="track">
+              <option value="Full-Stack">Full Stack</option>
+              <option value="Front-end">Front-end</option>
+              <option value="back-end">Back-end</option>
+            </select>
+            <small id="trackMessage"></small>
+          </aside>
+        </section>
+        <section>
+          <aside class="sign_up_form_label"><label for="Passward">Passward</label></aside>
+          <aside class="sign_up_form_input">
+            <input type="passward" id="Passward" name="Passward">
+            <small id="passwardMess"></small>
+          </aside>
+        </section>
+        <section>
+          <aside class="sign_up_form_label"><label for="check_Passward">Check Passward</label></aside>
+          <aside class="sign_up_form_input">
+             <input type="passward" id="check_Passward" name="Passward">
+             <small id="passwarRepMess"></small>
+          </aside>
+        </section>
+        <section>
+          <aside class="sign_up_form_label"><label for="bio">BIO</label></aside>
+          <aside class="sign_up_form_input"> <input type="text" id="bio" name="bio"></aside>
+        </section>
+  
+        <button class="sign_up_form_sign">Sign Up</button>
+      </form>
+      
 
     </div>
 
   </div>
+  <script src="js/sign_up.js"></script>
 </body>
 
 </html>
