@@ -6,10 +6,11 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Profile</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel='stylesheet' href='./profile.css'>
-    <link rel='stylesheet' href="../stylee.css" />
     <link rel="icon" href="../assest/image/iti-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href="./css/stylee.css" />
+
+    <link rel='stylesheet' href='./css/profile.css'>
 </head>
 
 <body>
@@ -20,10 +21,9 @@
         </nav>
         <nav id="nav_head">
             <!--put in href the page ypu create !!!-->
-            <a href="../home/home.html" class="iti-bar-item-button">Home</a>
+            <a href="./home.html" class="iti-bar-item-button">Home</a>
             <a href="#frindes" class="iti-bar-item-button">Friends</a>
             <a href="#profile" class="iti-bar-item-button">Profile</a>
-            <a href="#game" class="iti-bar-item-button">Entertainment</a>
             <a href="#logout" class="iti-bar-item-button">Logout</a>
         </nav>
     </header>
@@ -38,11 +38,11 @@
                 <button id="edit-profile" class="btn">Edit Profile</button>
             </div>
             <div class="profile_data">
-                <p class="grayTxt">5 Following</p>
+                <p class="grayTxt"> Following</p>
                 <p id="profileFolowing"></p>
             </div>
             <div class="profile_data">
-                <p class="grayTxt">10 Followers</p>
+                <p class="grayTxt">Followers</p>
                 <p id="profileFollowers"></p>
             </div>
             <div class="profile_data profile_social_side">
@@ -102,7 +102,9 @@
                             augue fermentum scelerisque. Vivamus dignissim mollis est dictum blandit. Nam porta auctor
                             neque sed congue. Nullam rutrum eget ex at maximus. Lorem ipsum dolor sit amet, consectetur
                             adipiscing elit. Donec eget vestibulum lorem.</p>
+                        <span id="pic">
 
+                        </span>
                     </div>
                 </div>
             </div>
@@ -183,7 +185,7 @@
         </div>
     </div>
 
-
+    <script src="./js/home.js"></script>
 </body>
 
 </html>
