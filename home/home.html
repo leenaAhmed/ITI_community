@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="../home.js"></script>
     <link rel="stylesheet" href="../stylee.css">
     <!--font awesome for icons-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -73,13 +74,16 @@
         <aside id="feed">
             <section id="post">
                 <img class="profile_img" src="../assest/image/3.jpg">
+                <!--to display the images-->
+                 <!-- <div id="display_image" ></div> -->
                 <textarea id="tex_post" placeholder="post"></textarea>
                 <div id="icons_post">
                     <!-- take care image will be uoloaded file -->
-                    <i class="fas fa-images"></i>
-                    <i class="fas fa-align-left"></i>
-                    <i class="fas fa-font"></i>
-                    <i class="fas fa-fill"></i>
+                   <label  onclick="uploadefile()" style="cursor: pointer;" for="uploade"> <i class="fas fa-images"></i> </label>
+                    <input type="file" id="uploade" style="display: none; visibility: hidden;">
+                    <i onclick="changealign()" class="fas fa-align-left"></i>
+                    <i onclick="changefont()" class="fas fa-font"></i>
+                    <i onclick="changecolor()" class="fas fa-fill"></i>
                 </div>
                 <button id="button_post">Post</button>
             </section>
@@ -143,7 +147,64 @@
             </section>
         </aside>
     </div>
+<!--js for home page-->
+<script>
+    /*icons for post*/
+    /*first icon*/
+    function uploadefile(){
+        var place=document.getElementById("post");
+        var place1=document.getElementById("tex_post");
+       var newElement= document.createElement("div");
+       newElement.setAttribute("id","display_image");
+        place.insertBefore(newElement, place1);
+       
+        // <div id="display_image" ></div>
+    const image_input = document.querySelector("#uploade");
+    var uploaded_image;
+    image_input.addEventListener('change', function() {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+    uploaded_image = reader.result;
+    document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+    });
+    reader.readAsDataURL(this.files[0]);
+    });
+      console.log(place);
 
+    }
+    /*second icon*/
+    function changealign()
+    {
+        var align=["center","right","left"];
+
+        var result=align[Math.floor(Math.random()*align.length)];
+        var textbox = document.getElementById("tex_post");
+        textbox.style.textAlign=result;
+
+    }
+     /*third icon*/
+     function changefont()
+    {
+        var align=["sans-serif","serif","cursive","monospace"];
+
+        var result=align[Math.floor(Math.random()*align.length)];
+        var textbox = document.getElementById("tex_post");
+        textbox.style.fontFamily=result;
+        // var textbox = document.getElementById("tex_post");
+        // textbox.style.fontSize=
+
+    }
+     /*4 icon*/
+     function changecolor()
+    {
+        var align=["red","black","blue","green","brown"];
+
+        var result=align[Math.floor(Math.random()*align.length)];
+        var textbox = document.getElementById("tex_post");
+        textbox.style.color=result;
+
+    }
+</script>
 </body>
 
 </html>
