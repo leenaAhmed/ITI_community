@@ -14,11 +14,11 @@
 }
 @font-face {
   font-family: itilogo;
-  src: url(./assest/fonts/MilleniaPersonalUse-w1OB8.ttf);
+  src: url(../assest/fonts/MilleniaPersonalUse-w1OB8.ttf);
 }
 @font-face {
   font-family: logo;
-  src: url(./assest/fonts/RoosterPersonalUse-3z8d8.ttf);
+  src: url(../assest/fonts/RoosterPersonalUse-3z8d8.ttf);
 }
 body {
   background-color: var(--layout-primary);

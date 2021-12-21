@@ -1,0 +1,306 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "linaahmed@gmail.com",
+      "password": "1234567",
+      "role": "admin",
+      "Fristname": "lina",
+      "lastname": "Ahmed",
+      "info": "bla bla bla",
+      "track": "System Development",
+      "profilepic": "3.jpg",
+      "socialNetwork": {
+        "facebook": "https://www.facebook.com/linaahmed",
+        "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
+        "github": "https://github.com/leenaAhmed"
+      }
+    },
+    {
+      "id": 2,
+      "email": "linaahmed@gmail.com",
+      "password": "1234567",
+      "role": "admin",
+      "Fristname": "sondos",
+      "lastname": "amgad",
+      "info": "bla bla bla",
+      "track": "System Development",
+      "profilepic": "5.jpg",
+      "socialNetwork": {
+        "facebook": "https://www.facebook.com/linaahmed",
+        "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
+        "github": "https://github.com/leenaAhmed"
+      }
+    },
+    {
+      "id": 3,
+      "email": "linaahmed@gmail.com",
+      "password": "1234567",
+      "role": "admin",
+      "Fristname": "ehsan",
+      "lastname": "mohamed",
+      "info": "bla bla bla",
+      "track": "System Development",
+      "profilepic": "4.jfif",
+      "socialNetwork": {
+        "facebook": "https://www.facebook.com/linaahmed",
+        "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
+        "github": "https://github.com/leenaAhmed"
+      }
+    },
+    {
+      "id": 4,
+      "email": "linaahmed@gmail.com",
+      "password": "1234567",
+      "role": "admin",
+      "Fristname": "lina",
+      "lastname": "Ahmed",
+      "info": "bla bla bla",
+      "track": "System Development",
+      "profilepic": "profile.jpg",
+      "socialNetwork": {
+        "facebook": "https://www.facebook.com/linaahmed",
+        "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
+        "github": "https://github.com/leenaAhmed"
+      }
+    },
+    {
+      "id": 5,
+      "email": "linaahmed@gmail.com",
+      "password": "1234567",
+      "role": "admin",
+      "Fristname": "lina",
+      "lastname": "Ahmed",
+      "info": "bla bla bla",
+      "track": "System Development",
+      "profilepic": "4.jfif",
+      "socialNetwork": {
+        "facebook": "https://www.facebook.com/linaahmed",
+        "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
+        "github": "https://github.com/leenaAhmed"
+      }
+    },
+    {
+      "id": 6,
+      "email": "linaahmed@gmail.com",
+      "password": "1234567",
+      "role": "admin",
+      "Fristname": "lina",
+      "lastname": "Ahmed",
+      "info": "bla bla bla",
+      "track": "System Development",
+      "profilepic": "1.jfif",
+      "socialNetwork": {
+        "facebook": "https://www.facebook.com/linaahmed",
+        "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
+        "github": "https://github.com/leenaAhmed"
+      }
+    },
+    {
+      "id": 7,
+      "email": "linaahmed@gmail.com",
+      "password": "1234567",
+      "role": "admin",
+      "Fristname": "lina",
+      "lastname": "Ahmed",
+      "info": "bla bla bla",
+      "track": "System Development",
+      "profilepic": "profile.jpg",
+      "socialNetwork": {
+        "facebook": "https://www.facebook.com/linaahmed",
+        "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
+        "github": "https://github.com/leenaAhmed"
+      }
+    },
+    {
+      "id": 8,
+      "email": "linaahmed@gmail.com",
+      "password": "1234567",
+      "role": "admin",
+      "Fristname": "lina",
+      "lastname": "Ahmed",
+      "info": "bla bla bla",
+      "track": "System Development",
+      "profilepic": "profile.jpg",
+      "socialNetwork": {
+        "facebook": "https://www.facebook.com/linaahmed",
+        "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
+        "github": "https://github.com/leenaAhmed"
+      }
+    },
+    {
+      "id": 9,
+      "email": "linaahmed@gmail.com",
+      "password": "1234567",
+      "role": "admin",
+      "Fristname": "lina",
+      "lastname": "Ahmed",
+      "info": "bla bla bla",
+      "track": "System Development",
+      "profilepic": "profile.jpg",
+      "socialNetwork": {
+        "facebook": "https://www.facebook.com/linaahmed",
+        "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
+        "github": "https://github.com/leenaAhmed"
+      }
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "body": "accusamus beatae ad facilis cum similique qui sunt",
+      "comments": [],
+      "userid": 1,
+      "userprofilepic": "1.jpg",
+      "username": "lina ahmed",
+      "created_at": "1/7/2021, 6:34:33 PM",
+      "tags": ["Programming", "Scientific"],
+      "likes": 4
+    },
+    {
+      "id": 2,
+      "body": "our, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which",
+      "comments": [],
+      "userid": 1,
+      "userprofilepic": "2.jpg",
+      "username": "ehsan mohameed",
+      "created_at": "1/7/2021, 5:34:33 PM",
+      "tags": ["Scientific"],
+      "likes": 7
+    },
+    {
+      "id": 3,
+      "body": "when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s .",
+      "img_path": [],
+      "comments": [],
+      "userid": 3,
+      "userprofilepic": "3.jpg",
+      "username": "sondos amged",
+      "created_at": "1/7/2021, 6:34:33 PM",
+      "tags": ["Programming"],
+      "likes": 3
+    },
+    {
+      "id": 4,
+      "body": "No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces n",
+      "img_path": [],
+      "comments": [],
+      "userid": 5,
+      "userprofilepic": "3.jpg",
+      "username": "menaa ",
+      "created_at": "1/7/2021, 2:34:33 PM",
+      "tags": ["Scientific", "Entertainment"],
+      "likes": 2
+    },
+    {
+      "id": 5,
+      "body": "ther hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and ",
+      "img_path": [],
+      "comments": [],
+      "userid": 2,
+      "userprofilepic": "4.jfif",
+      "username": "martina smouel",
+      "created_at": "1/7/2021, 2:37:33 PM",
+      "tags": ["Entertainment", "CV"],
+      "likes": 5
+    },
+    {
+      "id": 6,
+      "body": "we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and ",
+      "img_path": ["uchiha.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"],
+      "comments": [],
+      "userid": 2,
+      "userprofilepic": "1.jfif",
+      "username": "Esraa mohamed",
+      "created_at": "1/7/2020, 2:37:33 PM",
+      "tags": ["Entertainment", "CV"],
+      "likes": 5
+    }
+  ],
+  "following": [
+    {
+      "follower": 1,
+      "followed": 2
+    },
+    {
+      "follower": 1,
+      "followed": 5
+    },
+    {
+      "follower": 2,
+      "followed": 1
+    },
+    {
+      "follower": 5,
+      "followed": 1
+    },
+    {
+      "follower": 1,
+      "followed": 6
+    },
+    {
+      "follower": 1,
+      "followed": 4
+    },
+    {
+      "follower": 4,
+      "followed": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "content": "this is comment1",
+      "postid": 1,
+      "userprofilepic": "1.jfif",
+      "userid": 2,
+      "username": "Esraa mohamed",
+      "created_at": "1/7/2021, 6:34:33 PM"
+    },
+    {
+      "id": 2,
+      "content": "this is comment11",
+      "postid": 1,
+      "userid": 1,
+      "userprofilepic": "4.jfif",
+      "username": "anas ahmed",
+      "created_at": "1/7/2021, 5:34:33 PM"
+    },
+    {
+      "id": 3,
+      "content": "this is comment4",
+      "postid": 5,
+      "userprofilepic": "3.jpg",
+      "userid": 6,
+      "username": " Mostafa",
+      "created_at": "1/7/2021, 6:34:00 PM"
+    },
+    {
+      "id": 4,
+      "content": "this is comment 5",
+      "postid": 5,
+      "userprofilepic": "4.jpg",
+      "userid": 5,
+      "username": "marwa mohamed",
+      "created_at": "1/7/2021, 6:34:00 PM"
+    },
+    {
+      "id": 5,
+      "content": "this is comment 6",
+      "postid": 2,
+      "userprofilepic": "5.jpg",
+      "userid": 5,
+      "username": "lina ",
+      "created_at": "1/7/2021, 6:34:00 PM"
+    }
+  ],
+  "tags": [
+    "Scientific",
+    "Entertainment",
+    "Data Science",
+    "Big Data",
+    "AI",
+    "CV",
+    "Programming"
+  ]
+}
