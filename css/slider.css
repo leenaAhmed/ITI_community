@@ -1,0 +1,68 @@
+.slider {
+  margin-top: 0.5em;
+  margin-bottom: 0.7em;
+  background-color: #fff;
+  border-radius: 0.5em;
+
+  position: relative;
+}
+.slider h2 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.slider__container {
+  display: flex;
+}
+.slider__container__card {
+  width: 32%;
+  margin: 1em;
+  border-radius: 0.5em;
+  background-color: aliceblue;
+}
+.slider__container__card img {
+  width: 100%;
+  height: 60%;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+.slider__button__follow {
+  border: none;
+  width: 90%;
+  padding: 0.5em;
+  font-size: 1em;
+  margin: 0.5em 0;
+  border-radius: 0.5em;
+  background-color: var(--layout-primary);
+}
+.slider__username {
+  padding: 1em;
+  font-size: 1em;
+  text-align: start;
+}
+.btn {
+  position: absolute;
+  top: 146px;
+  background: #c92727;
+  color: #ccc;
+  padding: 0.25rem 0.35rem;
+  border-radius: 0.25rem;
+  border: transparent;
+  cursor: pointer;
+  height: 3em;
+}
+.btn.active {
+  background-color: #5c2f29;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+.next-btn {
+  right: -0.5rem;
+}
+.prev-btn {
+  left: -0.5rem;
+}
+.follow {
+  background-color: var(--layout-primary);
+}
+.unfollow {
+  background-color: #7cde7c;
+}

@@ -26,6 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="./css/slider.css">
     <link rel="icon" href="../assest/image/iti-logo.png">
 
     <title>ITI community</title>
@@ -91,39 +92,52 @@
                 </div>
                 <button id="button_post">Post</button>
             </section>
-            <section id="top_profile">
-                <h4>Top Profiles</h4>
-                <div class="top">
-                    <img>
-                    <p>Name1</p>
-                    <p>Jop</p>
-                    <button>Follow</button>
+            <div class="clearfix"></div>
+
+            <section class="slider">
+                <h2> Top Frindes</h2>
+                <div class="slider__container" id="slidercontent">
+
+
+                    <!-- 
+                    <div class="slider__container__card">
+                        <img src="./assest/image/4.jfif" alt="" srcset="">
+                        <h3 class="slider__username"> lina ahmed</h3>
+                        <button class="slider__button__follow">Follow</button>
+                    </div> -->
+                    <!--
+                    <div class="slider__container__card">
+                        <img src="./assest/image/4.jfif" alt="" srcset="">
+                        <h3 class="slider__username"> lina ahmed</h3>
+
+                        <button class="slider__button__follow">Follow</button>
+                    </div>
+                    <div class="slider__container__card">
+                        <img src="./assest/image/4.jfif" alt="" srcset="">
+                        <h3 class="slider__username"> lina ahmed</h3>
+
+                        <button class="slider__button__follow">Follow</button>
+                    </div> -->
+                    <!-- <div class="slider__container__card">
+                        <img src="./assest/image/4.jfif" alt="" srcset="">
+                        <h3 class="slider__username"> linaahmed</h3>
+
+                        <button class="slider__button__follow">Follow</button>
+                    </div> -->
                 </div>
-                <div class="top">
-                    <img>
-                    <p>Name2</p>
-                    <p>Jop</p>
-                    <button>Follow</button>
+                <!-- buttons -->
+                <!-- prev btn -->
+                <div id="slider_button">
+                    <button class="btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
-                <div class="top">
-                    <img>
-                    <p>Name3</p>
-                    <p>Jop</p>
-                    <button>Follow</button>
-                </div>
-                <div class="top">
-                    <img>
-                    <p>Name4</p>
-                    <p>Jop</p>
-                    <button>Follow</button>
-                </div>
-                <div class="top">
-                    <img>
-                    <p>Name5</p>
-                    <p>Jop</p>
-                    <button>Follow</button>
-                </div>
+
             </section>
+            <div class="clearfix"></div>
             <section id="users_posts">
                 <div id="first_post">
                     <header class="head_post">
@@ -151,6 +165,7 @@
             </section>
         </aside>
     </div>
+
 
 <!--js for home page-->
 <script>
@@ -213,6 +228,9 @@
 
     <!-- <script src="script.js"></script>
 -->
+
+    <script src="js/slider.js"></script>
+
 </body>
 
 </html>
