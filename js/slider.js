@@ -15,11 +15,12 @@ xhr.addEventListener("readystatechange", function () {
     pages = displayFollowers(obj);
     console.log(pages);
     init();
+    buttonFollower();
   }
 });
 
 function paginate(followers) {
-  var itemsPerPage = 4;
+  var itemsPerPage = 3;
   var numberOfPages = Math.ceil(followers.length / itemsPerPage);
 
   var newFollowers = Array.from({ length: numberOfPages }, (_, index) => {
@@ -37,7 +38,7 @@ function displayFollowers(followers) {
       <div class="slider__container__card">
       <img src="./assest/image/${profilepic}" alt="" srcset="">
       <h3 class="slider__username"> ${Fristname} ${lastname}</h3>
-      <button class="slider__button__follow">Follow</button>
+      <button class="slider__button__follow follow">Follow</button>
   </div>
        `;
     })
@@ -68,7 +69,25 @@ btnContainer.addEventListener("click", function (e) {
       index = pages.length - 1;
     }
   }
+  console.log(index);
   displayFollowers(pages[index]);
 });
+
+var followerbutton = document.getElementsByClassName("slider__button__follow");
+function buttonFollower() {
+  for (var i = 0; i < followerbutton.length; i++) {
+    followerbutton[i].addEventListener("click", function (e) {
+      if (e.target.classList.contains("follow")) {
+        e.target.classList.add("unfollow");
+        e.target.classList.remove("follow");
+        e.target.innerHTML = "unfollow";
+      } else {
+        e.target.classList.add("follow");
+        e.target.classList.remove("unfollow");
+        e.target.innerHTML = "follow";
+      }
+    });
+  }
+}
 
 xhr.send("");
