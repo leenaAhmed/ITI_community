@@ -34,6 +34,24 @@ function displaycookie() {
     var editname = document.getElementById("FnameEdite");
     var LnameEdite = document.getElementById("LnameEdite");
     var emailEdite = document.getElementById("emailEdite");
+    _lName = $("#LnameEdite").val();
+    _Email = $("#emailEdite").val();
+    _bio = $("#bioEdite").val();
+    var newProfileImg = $(".EditProfileImg").val();
+    setCookie("email", _Email);
+    setCookie("bio", _bio);
+    console.log(newProfileImg, "profile img");
+    setCookie("Fname", _fname);
+    setCookie("Lname", _lName);
+    var _newProfileImg = newProfileImg.replace(/^.*[\\\/]/, "");
+    if (_newProfileImg != "") {
+      setCookie("profilepic", _newProfileImg);
+    }
+    var path = "/img/" + _newProfileImg;
+    $("#ProfileImg").attr("src", path);
+
+    $("#_bio").html(getCookie("bio"));
+    location.reload(true);
   });
 }
 

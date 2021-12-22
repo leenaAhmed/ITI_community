@@ -1,9 +1,13 @@
 //button of sin up and button of log in on page sign in
-document.getElementById("login_sign_in").addEventListener("click", function (e) {
+document
+  .getElementById("login_sign_in")
+  .addEventListener("click", function (e) {
     e.preventDefault();
     document.getElementById("login_sign_in").style.cursor = "not-allowed";
   });
-document.getElementById("login_sign_up").addEventListener("click", function (e) {
+document
+  .getElementById("login_sign_up")
+  .addEventListener("click", function (e) {
     e.preventDefault();
     window.open("index.html", "_self");
   });
@@ -11,12 +15,12 @@ document.getElementById("login_sign_up").addEventListener("click", function (e) 
 //log in
 var form2 = document.getElementById("form_log");
 var logIn = document.getElementById("login_form_sign");
-var email = document.getElementById("Email_log").Value;
-var passward = document.getElementById("Passward_log").Value;
+var email = document.getElementById("Email_log");
+var passward = document.getElementById("Passward_log");
 
 logIn.addEventListener("click", function (e) {
   e.preventDefault();
-  if (email.length == 0 || passward.length == 0) {
+  if (email.Value.length == 0 || passward.Value == 0) {
     alert("Invalid your Data!");
   } else {
     var newreq = new XMLHttpRequest();
