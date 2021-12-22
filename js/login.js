@@ -20,7 +20,7 @@ var passward = document.getElementById("Passward_log");
 
 logIn.addEventListener("click", function (e) {
   e.preventDefault();
-  if (email.Value.length == 0 || passward.Value == 0) {
+  if (email.value.length == 0 || passward.value.length == 0) {
     alert("Invalid your Data!");
   } else {
     var newreq = new XMLHttpRequest();
