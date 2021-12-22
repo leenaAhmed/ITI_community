@@ -142,3 +142,6 @@ small{
   border-radius: 50rem;
 }
 
+button:hover{
+  cursor: pointer;
+}
