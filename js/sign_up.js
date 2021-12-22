@@ -93,16 +93,15 @@ trackSelect.onselect = function () {
 
 function selectCheck() {
   var track = trackSelect.value;
-    if(track == ""){
-        trackMessg.innerText = "You Should Select a Track";
-        trackSelect.style.border = "2px solid red";
-        trackMessg.style.color = "red";
-    } else {
-        trackMessg.innerText = "";
-        trackSelect.style.border = '2px solid green';
-    }
+  if (track == "") {
+    trackMessg.innerText = "You Should Select a Track";
+    trackSelect.style.border = "2px solid red";
+    trackMessg.style.color = "red";
+  } else {
+    trackMessg.innerText = "";
+    trackSelect.style.border = "2px solid green";
+  }
 }
-
 
 //verification Passward
 var Passward = document.getElementById("Passward");
@@ -120,8 +119,7 @@ function passwordCheck() {
     passwardMess.innerHTML = "Password can't Be less than 8 chars!";
     passwardMess.style.color = "red";
     Passward.style.border = "2px solid red";
-  } 
-  else {
+  } else {
     passwardMess.innerHTML = "Valid Password!";
     passwardMess.style.color = "green";
     Passward.style.border = "2px solid green";
@@ -144,47 +142,46 @@ function checkedPasswardCheck() {
     passwarRepMess.innerHTML = "Password can't Be less than 8 chars!";
     passwarRepMess.style.color = "red";
     checkedPassward.style.border = "2px solid red";
-
-  } else if (Passward.value != passwarRepeat){
+  } else if (Passward.value != passwarRepeat) {
     passwarRepMess.innerHTML = "Password and confirm password don't match";
-    passwarRepMess.style.color = 'red';
+    passwarRepMess.style.color = "red";
     checkedPassward.style.border = "2px solid red";
-    
-} 
-  else {
+  } else {
     passwarRepMess.innerHTML = "Valid Password!";
     passwarRepMess.style.color = "green";
     checkedPassward.style.border = "2px solid green";
   }
 }
 // bio
-var bio = document.getElementById("bio").value;
+var bio = document.getElementById("bio");
 // Sign Up
 var signUpForm = document.getElementById("form");
-signUpForm.addEventListener("submit",function(e){
+signUpForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  if(!firstName.value || !lastName.value || !Email.value || !Passward.value ||!checkedPassward.value){
+  if (
+    !firstName.value ||
+    !lastName.value ||
+    !Email.value ||
+    !Passward.value ||
+    !checkedPassward.value
+  ) {
     alert("Invalid your Data!");
-  }else{
+  } else {
     setCookie();
-   //المفروض يدخلني على صفحة الهوم
-   window.open("home.html","_self");
-
+    //المفروض يدخلني على صفحة الهوم
+    window.open("home.html", "_self");
   }
-   
-
-})
+});
 function setCookie() {
   var d = new Date();
-  d.setMonth(d.getMonth()+6);
+  d.setMonth(d.getMonth() + 6);
 
-  document.cookie = "firstName=" + firstName.value   + ";expires=" + d;
-  document.cookie = "lastName="  + lastName.value    + ";expires=" + d;
-  document.cookie = "Email="     + Email.value       + ";expires=" + d;
-  document.cookie = "Passward="  + Passward.value    + ";expires=" + d;
-  document.cookie = "Track="     + trackSelect.value + ";expires=" + d;
-  document.cookie = "BIO="       + bio   + ";expires=" + d;
-  
+  document.cookie = "firstName=" + firstName.value + ";expires=" + d;
+  document.cookie = "lastName=" + lastName.value + ";expires=" + d;
+  document.cookie = "Email=" + Email.value + ";expires=" + d;
+  document.cookie = "Passward=" + Passward.value + ";expires=" + d;
+  document.cookie = "Track=" + trackSelect.value + ";expires=" + d;
+  document.cookie = "BIO=" + bio.value + ";expires=" + d;
 }
 /*
 function allCookieList() {
@@ -199,19 +196,11 @@ function allCookieList() {
 */
 
 //button of sin up and button of sin in
-document.getElementById("signUp").addEventListener("click",function(e){
+document.getElementById("signUp").addEventListener("click", function (e) {
   e.preventDefault();
-  document.getElementById("signUp").style.cursor="not-allowed";
+  document.getElementById("signUp").style.cursor = "not-allowed";
 });
-document.getElementById("signIn").addEventListener("click",function(e){
+document.getElementById("signIn").addEventListener("click", function (e) {
   e.preventDefault();
-  window.open("index2.html","_self");
-})
-
-
-
-
-
-
-
-
+  window.open("index2.html", "_self");
+});
