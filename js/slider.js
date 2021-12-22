@@ -1,9 +1,8 @@
-var slider = document.getElementById("slidercontent");
-var slider_button = document.getElementById("slider_button");
-var btnContainer = document.getElementsByClassName("btn");
-var nextBtn = document.querySelector(".next-btn");
-var prevBtn = document.querySelector(".prev-btn");
+var btnContainer = document.querySelector("#slider_button");
+var container = document.querySelector("#slidercontent");
+
 var xhr = new XMLHttpRequest();
+
 var data;
 var obj;
 let index = 0;
@@ -13,46 +12,67 @@ xhr.addEventListener("readystatechange", function () {
   if (xhr.readyState == 4 && xhr.status == 200) {
     data = JSON.parse(xhr.response);
     obj = data["users"];
-    pages = DisplayList(obj);
+    pages = displayFollowers(obj);
+    console.log(pages);
+    init();
   }
 });
 
-let current_page = 1;
-let rows = 4;
-
-function DisplayList(items, rows_per_page = rows, page = current_page) {
-  let start = rows_per_page * page;
-  let end = start + rows_per_page;
-  let paginatedItems = items.slice(start, end);
-
-  for (let i = 0; i < paginatedItems.length; i++) {
-    let item = paginatedItems[i];
-
-    slider.innerHTML += `<div class="slider__container__card">
-     <img src="./assest/image/${item.profilepic}" alt="" srcset="">
-      <h3 class="slider__username"> ${item.Fristname} ${item.lastname}</h3>
-       <button class="slider__button__follow"> Follow</button>
-     </div>`;
-  }
+function fetchFollowers() {
+  return obj;
 }
-function update() {
-  DisplayList(pages[index]);
+
+function paginate(followers) {
+  var itemsPerPage = 4;
+  var numberOfPages = Math.ceil(followers.length / itemsPerPage);
+
+  var newFollowers = Array.from({ length: numberOfPages }, (_, index) => {
+    const start = index * itemsPerPage;
+    return followers.slice(start, start + itemsPerPage);
+  });
+  return newFollowers;
 }
-slider_button.addEventListener("click", function (e) {
+
+function displayFollowers(followers) {
+  var newFollowers = followers
+    .map((person) => {
+      var { profilepic, Fristname, lastname } = person;
+      return `
+      <div class="slider__container__card">
+      <img src="./assest/image/${profilepic}" alt="" srcset="">
+      <h3 class="slider__username"> ${Fristname} ${lastname}</h3>
+      <button class="slider__button__follow">Follow</button>
+  </div>
+       `;
+    })
+    .join("");
+  container.innerHTML = newFollowers;
+}
+
+function init() {
+  var followers = fetchFollowers();
+  console.log("my followers", followers);
+  pages = paginate(followers);
+  console.log(pages);
+  displayFollowers(pages[index]);
+}
+
+btnContainer.addEventListener("click", function (e) {
   if (e.target.classList.contains("btn-container")) return;
 
   if (e.target.classList.contains("next-btn")) {
-    current_page++;
+    index++;
     if (index > pages.length - 1) {
       index = 0;
     }
   }
   if (e.target.classList.contains("prev-btn")) {
-    current_page--;
+    index--;
     if (index < 0) {
-      current_page = pages.length - 1;
+      index = pages.length - 1;
     }
   }
-  update();
+  displayFollowers(pages[index]);
 });
+
 xhr.send("");
