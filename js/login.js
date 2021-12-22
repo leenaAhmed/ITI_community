@@ -1,6 +1,5 @@
 //button of sin up and button of log in on page sign in
-document
-  .getElementById("login_sign_in")
+document.getElementById("login_sign_in")
   .addEventListener("click", function (e) {
     e.preventDefault();
     document.getElementById("login_sign_in").style.cursor = "not-allowed";
@@ -17,7 +16,6 @@ var form2 = document.getElementById("form_log");
 var logIn = document.getElementById("login_form_sign");
 var email = document.getElementById("Email_log").Value;
 var passward = document.getElementById("Passward_log").Value;
-
 
 logIn.addEventListener("click", function (e) {
   e.preventDefault();
@@ -36,15 +34,17 @@ logIn.addEventListener("click", function (e) {
             if (users[i].password == passward) {
               var d = new Date();
               d.setMonth(d.getMonth() + 6);
-              document.cookie ="id"+ users[i].id + ";expires=" + d;
+              document.cookie = "id" + users[i].id + ";expires=" + d;
               document.cookie = "email" + users[i].email + ";expires=" + d;
-              document.cookie = "bio"+ users[i].bio + ";expires=" + d;
-              document.cookie = "Passward=" +users[i].password + ";expires=" + d;
-              document.cookie = "Fname"+ users[i].Fristname + ";expires=" + d;
-              document.cookie = "Lname"+ users[i].lastname + ";expires=" + d;
+              document.cookie = "bio" + users[i].bio + ";expires=" + d;
+              document.cookie =
+                "Passward=" + users[i].password + ";expires=" + d;
+              document.cookie = "Fname" + users[i].Fristname + ";expires=" + d;
+              document.cookie = "Lname" + users[i].lastname + ";expires=" + d;
               document.cookie = "BIO=" + users[i].info + ";expires=" + d;
               document.cookie = "Track=" + users[i].track + ";expires=" + d;
-              document.cookie = "ProfilePicture=" + users[i].profilepic + ";expires=" + d;
+              document.cookie =
+                "ProfilePicture=" + users[i].profilepic + ";expires=" + d;
               window.open("profile.html");
             }
           }
