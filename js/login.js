@@ -24,7 +24,11 @@ document
     e.preventDefault();
     window.open("index.html", "_self");
   });
-
+document
+  .querySelector(".login_form_sign")
+  .addEventListener("click", function (e) {
+    window.open("home.html", "_self");
+  });
 //form
 var form2 = document.getElementById("form_log");
 var _email = document.getElementById("Email_log").Value;

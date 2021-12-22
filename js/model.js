@@ -32,8 +32,3 @@ editProfile.onclick = function (event) {
 };
 
 //
-var _fname = getCookie("Fristname");
-var _lName = getCookie("lastname");
-var _Track = getCookie("track");
-var _Email = getCookie("email");
-var _bio = getCookie("bio");
