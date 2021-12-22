@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
-    <link rel="icon" href="../assest/image/iti-logo.png">
-    <link rel="stylesheet" href="../stylee.css">
+    <link rel="icon" href="assest/image/iti-logo.png">
+    <link rel="stylesheet" href="css/stylee.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+
 </head>
 
 <body>
@@ -41,26 +42,24 @@
     </div>
     <div class="login_right">
         <div class="login_right_button">
-            <button class="login_sign_up">Sign up</button>
-            <button class="login_sign_in">Sign in</button>
+            <button class="login_sign_up" id="login_sign_up">Sign up</button>
+            <button class="login_sign_in" id="login_sign_in">Sign in</button>
         </div>
         <div class="login_form">
             <p>Sign in</p>
-
-            <section>
-                <aside class="login_form_label"><label for="Email">Email</label></aside>
-                <aside class="login_form_input">
-                    <i class="fa fa-user"></i>
-                    <input type="email" id="Email" name="Email" placeholder=" Enter your email address">
-                </aside>
-            </section>
-            <section>
-
+            <form id="form_log">
                 <section>
-                    <aside class="login_form_label"><label for="Passward">Passward</label></aside>
+                    <aside class="login_form_label"><label for="Email_log">Email</label></aside>
+                    <aside class="login_form_input">
+                        <i class="fa fa-user"></i>
+                        <input type="email" id="Email_log" name="Email" placeholder=" Enter your email address">
+                    </aside>
+                </section>
+                <section>
+                    <aside class="login_form_label"><label for="Passward_log">Passward</label></aside>
                     <aside class="login_form_input">
                         <i class="fas fa-lock"></i>
-                        <input type="passward" id="Passward" name="Passward" placeholder="Enter your password">
+                        <input type="passward" id="Passward_log" name="Passward" placeholder="Enter your password">
                     </aside>
                 </section>
                 <section>
@@ -70,9 +69,14 @@
 
 
                 <button class="login_form_sign">Log in</button>
-                <br><br><br><br><br><br><br><br><br>
+            </form>
+
+            <br><br><br><br><br><br><br><br><br>
 
         </div>
+    </div>
+    <script src="./js/login.js"></script>
+
 
 </body>
 

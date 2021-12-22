@@ -27,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/slider.css">
-    <link rel="icon" href="../assest/image/iti-logo.png">
+    <link rel="icon" href="assest/image/iti-logo.png">
 
     <title>ITI community</title>
 </head>
@@ -167,6 +167,7 @@
     </div>
 
 
+
 <!--js for home page-->
 <script>
     /*icons for post*/
@@ -230,6 +231,74 @@
 -->
 
     <script src="js/slider.js"></script>
+
+
+  
+   <!-- <script src="js/slider.js"></script> -->
+ 
+
+<!--js for home page-->
+<script>
+    /*icons for post*/
+    /*first icon*/
+    function uploadefile(){
+        var place=document.getElementById("post");
+        var place1=document.getElementById("tex_post");
+       var newElement= document.createElement("div");
+       newElement.setAttribute("id","display_image");
+        place.insertBefore(newElement, place1);
+       
+        // <div id="display_image" ></div>
+    const image_input = document.querySelector("#uploade");
+    var uploaded_image;
+    image_input.addEventListener('change', function() {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+    uploaded_image = reader.result;
+    document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+    });
+    reader.readAsDataURL(this.files[0]);
+    });
+      console.log(place);
+
+    }
+    /*second icon*/
+    function changealign()
+    {
+        var align=["center","right","left"];
+
+        var result=align[Math.floor(Math.random()*align.length)];
+        var textbox = document.getElementById("tex_post");
+        textbox.style.textAlign=result;
+
+    }
+     /*third icon*/
+     function changefont()
+    {
+        var align=["sans-serif","serif","cursive","monospace"];
+
+        var result=align[Math.floor(Math.random()*align.length)];
+        var textbox = document.getElementById("tex_post");
+        textbox.style.fontFamily=result;
+        // var textbox = document.getElementById("tex_post");
+        // textbox.style.fontSize=
+
+    }
+     /*4 icon*/
+     function changecolor()
+    {
+        var align=["red","black","blue","green","brown"];
+
+        var result=align[Math.floor(Math.random()*align.length)];
+        var textbox = document.getElementById("tex_post");
+        textbox.style.color=result;
+
+    }
+</script>
+
+    
+
+  
 
 </body>
 
