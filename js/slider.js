@@ -18,10 +18,6 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-function fetchFollowers() {
-  return obj;
-}
-
 function paginate(followers) {
   var itemsPerPage = 4;
   var numberOfPages = Math.ceil(followers.length / itemsPerPage);
@@ -50,7 +46,7 @@ function displayFollowers(followers) {
 }
 
 function init() {
-  var followers = fetchFollowers();
+  var followers = obj;
   console.log("my followers", followers);
   pages = paginate(followers);
   console.log(pages);
