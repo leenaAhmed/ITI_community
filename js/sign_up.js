@@ -1,4 +1,3 @@
-var form = document.getElementById("form");
 // verification firstName
 var firstName = document.getElementById("fname");
 var FnameMess = document.getElementById("FnameMess");
@@ -93,7 +92,7 @@ trackSelect.onselect = function () {
 };
 
 function selectCheck() {
-var track = trackSelect.value;
+  var track = trackSelect.value;
     if(track == ""){
         trackMessg.innerText = "You Should Select a Track";
         trackSelect.style.border = "2px solid red";
@@ -158,5 +157,61 @@ function checkedPasswardCheck() {
     checkedPassward.style.border = "2px solid green";
   }
 }
+// bio
+var bio = document.getElementById("bio").value;
+// Sign Up
+var signUpForm = document.getElementById("form");
+signUpForm.addEventListener("submit",function(e){
+  e.preventDefault();
+  if(!firstName.value || !lastName.value || !Email.value || !Passward.value ||!checkedPassward.value){
+    alert("Invalid your Data!");
+  }else{
+    setCookie();
+   //المفروض يدخلني على صفحة الهوم
+   window.open("home.html","_self");
+
+  }
+   
+
+})
+function setCookie() {
+  var d = new Date();
+  d.setMonth(d.getMonth()+6);
+
+  document.cookie = "firstName=" + firstName.value   + ";expires=" + d;
+  document.cookie = "lastName="  + lastName.value    + ";expires=" + d;
+  document.cookie = "Email="     + Email.value       + ";expires=" + d;
+  document.cookie = "Passward="  + Passward.value    + ";expires=" + d;
+  document.cookie = "Track="     + trackSelect.value + ";expires=" + d;
+  document.cookie = "BIO="       + bio   + ";expires=" + d;
+  
+}
+/*
+function allCookieList() {
+  var cookieArr = []
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+      var parts = cookies[i].split("=");
+      cookieArr[parts[0].trim()] = parts[1];
+  }
+  return cookieArr;
+}
+*/
+
+//button of sin up and button of sin in
+document.getElementById("signUp").addEventListener("click",function(e){
+  e.preventDefault();
+  document.getElementById("signUp").style.cursor="not-allowed";
+});
+document.getElementById("signIn").addEventListener("click",function(e){
+  e.preventDefault();
+  window.open("index2.html","_self");
+})
+
+
+
+
+
+
 
 
