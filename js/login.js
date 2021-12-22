@@ -1,12 +1,9 @@
 //button of sin up and button of log in on page sign in
-document.getElementById("login_sign_in")
-  .addEventListener("click", function (e) {
+document.getElementById("login_sign_in").addEventListener("click", function (e) {
     e.preventDefault();
     document.getElementById("login_sign_in").style.cursor = "not-allowed";
   });
-document
-  .getElementById("login_sign_up")
-  .addEventListener("click", function (e) {
+document.getElementById("login_sign_up").addEventListener("click", function (e) {
     e.preventDefault();
     window.open("index.html", "_self");
   });
