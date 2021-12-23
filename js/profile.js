@@ -1,22 +1,43 @@
+// profile variable
 var userFullName = document.getElementById("UserFullName");
 var userTrack = document.getElementById("UserTrack");
 var bio = document.getElementById("profile_bio");
 
-var editprofileInfo = document.getElementById("editprofileBtn");
-function displaycookies() {
+// edit variables
+var editname = document.getElementById("FnameEdite");
+var LnameEdite = document.getElementById("LnameEdite");
+var emailEdite = document.getElementById("emailEdite");
+var bioEdite = document.getElementById("bioEdite");
+var newProfileImg = document.getElementById("EditProfileImg");
+// ProfileImg
+var proFileImg = document.getElementById("ProfileImg");
+var editprofileInfo = document.getElementById("editProfileBtn");
+var path;
+// function changealign
+
+function getcookies() {
   var associativeCookie = [];
   var cookies = document.cookie.split(";"); //
 
   for (var i = 0; i < cookies.length; i++) {
     associativeCookie[cookies[i].split("=")[0].trim()] =
       cookies[i].split("=")[1];
-    console.log(cookies[i].split("=")[1]);
+    // console.log(cookies[i].split("=")[1]);
   }
   return associativeCookie;
 }
+function setCookie() {
+  var d = new Date();
+  d.setMonth(d.getMonth() + 6);
 
+  document.cookie = "firstName=" + editname.value + ";expires=" + d;
+  document.cookie = "lastName=" + LnameEdite.value + ";expires=" + d;
+  document.cookie = "Email=" + emailEdite.value + ";expires=" + d;
+  document.cookie = "BIO=" + bioEdite.value + ";expires=" + d;
+  document.cookie = "EditProfileImg=" + newProfileImg.value + ";expires=" + d;
+}
 function displaycookie() {
-  var getcookie = displaycookies();
+  var getcookie = getcookies();
   console.log(getcookie);
 
   var _fname = getcookie["firstName"];
@@ -24,33 +45,30 @@ function displaycookie() {
   var _Track = getcookie["Track"];
   var _Email = getcookie["Email"];
   var _bio = getcookie["BIO"];
-  console.log(getcookie["Fristname"]);
-  console.log(_fname);
+
+  var _newProfileImg = getcookie["EditProfileImg"];
+
+  var profile = _newProfileImg.replace(/C:\\fakepath\\/g, "");
+  console.log(profile);
+
   userFullName.innerHTML = `${_fname} ${_lName} `;
   userTrack.innerHTML = `${_Track}`;
   bio.innerHTML = `${_bio}`;
+  proFileImg.src = `/assest/image/${profile}`;
+  editprofileInfo.addEventListener("click", function (e) {
+    setCookie();
+    getcookies();
+    displaycookie();
+    userFullName.innerHTML = `${_fname} ${_lName} `;
+    userTrack.innerHTML = `${_Track}`;
+    bio.innerHTML = `${bio}`;
 
-  editprofileInfo.addEventListener(click, function (e) {
-    var editname = document.getElementById("FnameEdite");
-    var LnameEdite = document.getElementById("LnameEdite");
-    var emailEdite = document.getElementById("emailEdite");
-    _lName = $("#LnameEdite").val();
-    _Email = $("#emailEdite").val();
-    _bio = $("#bioEdite").val();
-    var newProfileImg = $(".EditProfileImg").val();
-    setCookie("email", _Email);
-    setCookie("bio", _bio);
-    console.log(newProfileImg, "profile img");
-    setCookie("Fname", _fname);
-    setCookie("Lname", _lName);
-    var _newProfileImg = newProfileImg.replace(/^.*[\\\/]/, "");
-    if (_newProfileImg != "") {
-      setCookie("profilepic", _newProfileImg);
-    }
-    var path = "/img/" + _newProfileImg;
-    $("#ProfileImg").attr("src", path);
+    path = `"/assest/image/${profile}"`;
 
-    $("#_bio").html(getCookie("bio"));
+    proFileImg.src = path;
+    setTimeout(function () {
+      document.getElementsByClassName("editModal").style.display = "none";
+    }, 100);
     location.reload(true);
   });
 }
