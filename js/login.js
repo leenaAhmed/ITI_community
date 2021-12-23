@@ -23,36 +23,29 @@ logIn.addEventListener("click", function (e) {
   if (email.value.length == 0 || passward.value.length == 0) {
     alert("Invalid your Data!");
   } else {
-    var newreq = new XMLHttpRequest();
-    var data;
-    newreq.open("GET", "./json/profile.json");
-    newreq.addEventListener("readystatechange", function () {
-      if (newreq.readyState == 4 && newreq.status == 200) {
-        data = JSON.parse(newreq.response);
-        var users = data.users;
-        for (var i = 0; i < users.length; i++) {
-          if (users[i].email == email) {
-            if (users[i].password == passward) {
-              var d = new Date();
-              d.setMonth(d.getMonth() + 6);
-              document.cookie = "id" + users[i].id + ";expires=" + d;
-              document.cookie = "email" + users[i].email + ";expires=" + d;
-              document.cookie = "bio" + users[i].bio + ";expires=" + d;
-              document.cookie =
-                "Passward=" + users[i].password + ";expires=" + d;
-              document.cookie = "Fname" + users[i].Fristname + ";expires=" + d;
-              document.cookie = "Lname" + users[i].lastname + ";expires=" + d;
-              document.cookie = "BIO=" + users[i].info + ";expires=" + d;
-              document.cookie = "Track=" + users[i].track + ";expires=" + d;
-              document.cookie =
-                "ProfilePicture=" + users[i].profilepic + ";expires=" + d;
-              window.open("profile.html");
-            }
-          }
-        }
+    var arr=[];
+    var cookie=document.cookie.split(';');
+    for(var i=0; i<cookie.length; i++){
+      var cookieValue =cookie[i].split("=")[1];
+      console.log(cookieValue)
+      arr.push(cookieValue);
+    }
+    
+    for(var i=0; i<arr.length;i++){
+      if(arr[i] == email.value){
+        window.open("profile.html");
       }
-    });
-
-    newreq.send("");
+    }
   }
+
+  var remember = document.getElementById("remember");
+if(remember.checked){
+  var d = new Date();
+  d.setMonth(d.getMonth() + 6);
+  document.cookie = "UserEmail=" + email.value + ";expires=" + d;
+  document.cookie = "Passwared=" + passward.value + ";expires=" + d;
+}
+
 });
+
+

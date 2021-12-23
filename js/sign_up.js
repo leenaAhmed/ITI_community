@@ -183,17 +183,15 @@ function setCookie() {
   document.cookie = "Track=" + trackSelect.value + ";expires=" + d;
   document.cookie = "BIO=" + bio.value + ";expires=" + d;
 }
-/*
-function allCookieList() {
-  var cookieArr = []
-  var cookies = document.cookie.split(";");
-  for (var i = 0; i < cookies.length; i++) {
-      var parts = cookies[i].split("=");
-      cookieArr[parts[0].trim()] = parts[1];
-  }
-  return cookieArr;
-}
-*/
+
+  
+   
+  
+
+
+
+  
+
 
 //button of sin up and button of sin in
 document.getElementById("signUp").addEventListener("click", function (e) {
