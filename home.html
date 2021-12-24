@@ -103,15 +103,39 @@
 
         <!-- </aside> -->
         <aside id="feed">
-            <section id="post">
+            <!--================================================ @leena post section================================================ -->
+            <section class="post-container">
+                <div class="post__user--profile">
+                    <img id="ProfileImg" src="./assest/image/1.jpeg">
+                    <p id="UserFullName">leena</p>
+                </div>
+                <article class="post--body">
+                    <textarea name="" id="postTextArea" rows="2" placeholder="tell what you think"></textarea>
+                    <div class="post__body--icon">
+                        <div class="post__body__textIcons">
+                            <label for="postImgs">
+                                <i class="fas fa-images icon"></i>
+                                <img class="upImg" />
+                            </label>
+                            <input name="postImgs" id="postImgs" type="file" accept="image/*" multiple>
+                            <i onclick="changealign()" class="fas fa-align-left icon"></i>
+                            <i onclick="changefont()" class="fas fa-font icon"></i>
+                            <i onclick="changecolor()" class="fas fa-fill icon"></i>
+                        </div>
+                        <button id="post-btn" class="post-btn " onclick="CreatePost()">Post</button>
+                    </div>
+                </article>
+            </section>
+            <!--================================================ @leena post section================================================ -->
+            <!-- <section id="post"> -->
 
-                <img class="profile_img" src="">
-                <!--to display the images-->
-                <!-- <div id="display_image" ></div> -->
+            <!-- <img class="profile_img" src=""> -->
+            <!--to display the images-->
+            <!-- <div id="display_image"></div>
                 <textarea id="tex_post" placeholder="post"></textarea>
-                <div id="icons_post">
-                    <!-- take care image will be uoloaded file -->
-                    <label onclick="uploadefile()" style="cursor: pointer;" for="uploade"> <i class="fas fa-images"></i>
+                <div id="icons_post"> -->
+            <!-- take care image will be uoloaded file -->
+            <!-- <label onclick="uploadefile()" style="cursor: pointer;" for="uploade"> <i class="fas fa-images"></i>
                     </label>
                     <input type="file" id="uploade" style="display: none; visibility: hidden;">
                     <i onclick="changealign()" class="fas fa-align-left"></i>
@@ -119,39 +143,19 @@
                     <i onclick="changecolor()" class="fas fa-fill"></i>
                 </div>
                 <button id="button_post" onclick="addpost()">Post</button>
-            </section>
+            </section> -->
             <div class="clearfix"></div>
             <!-- -------------------------------------- @leena Slider------------------------------------------------------------------- -->
             <section class="slider">
                 <h2> Top Frindes</h2>
                 <div class="slider__container" id="slidercontent">
-
-
                     <!-- 
                     <div class="slider__container__card">
                         <img src="./assest/image/4.jfif" alt="" srcset="">
                         <h3 class="slider__username"> lina ahmed</h3>
                         <button class="slider__button__follow">Follow</button>
                     </div> -->
-                    <!--
-                    <div class="slider__container__card">
-                        <img src="./assest/image/4.jfif" alt="" srcset="">
-                        <h3 class="slider__username"> lina ahmed</h3>
 
-                        <button class="slider__button__follow">Follow</button>
-                    </div>
-                    <div class="slider__container__card">
-                        <img src="./assest/image/4.jfif" alt="" srcset="">
-                        <h3 class="slider__username"> lina ahmed</h3>
-
-                        <button class="slider__button__follow">Follow</button>
-                    </div> -->
-                    <!-- <div class="slider__container__card">
-                        <img src="./assest/image/4.jfif" alt="" srcset="">
-                        <h3 class="slider__username"> linaahmed</h3>
-
-                        <button class="slider__button__follow">Follow</button>
-                    </div> -->
                 </div>
                 <!-- buttons -->
                 <!-- prev btn -->
@@ -240,8 +244,8 @@
                     </div>
                 </div> -->
 
-            </section>
-        </aside>
+            <!-- </section>
+        </aside> -->
     </div>
 
 
@@ -270,7 +274,7 @@
 
 
     <!--js for home page-->
-    <!-- <script>
+    <script>
         /*icons for post*/
         /*first icon*/
         function uploadefile() {
@@ -324,7 +328,7 @@
 
         }
 
-    </script> -->
+    </script>
 
 
 

@@ -24,7 +24,7 @@
   border-radius: 10px;
 }
 #side_profile {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 16;
   text-align: center;
   float: left;
@@ -37,6 +37,62 @@
   display: flex;
   flex-direction: column;
 }
+/* leena post style */
+.post-container {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 17px;
+}
+.post__user--profile {
+  display: flex;
+  text-align: center;
+  padding: 10px;
+}
+.post__user--profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-left: 10px;
+}
+.post__user--profile p {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.post--body {
+  padding-left: 15%;
+  padding-right: 2%;
+}
+.post--body textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #ccc;
+  resize: none;
+}
+.post__body--icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post__body--icon input {
+  display: none;
+}
+.post__body__textIcons .icon {
+  font-size: 25px;
+  margin-left: 10px;
+}
+.post__body--icon .post-btn {
+  background-color: #901b20;
+  font-size: 18px;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px #8080807d;
+  color: var(--color);
+}
+/* leena post style */
 #side_profile > div {
   height: 100px;
   padding-top: 15px;
@@ -90,14 +146,14 @@
 #side_profile > #profile_info > p {
   text-align: center;
   font-size: 20px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 #side_profile > #profile_following,
 #profile_followers {
   text-align: center;
   font-size: 25px;
   border-bottom: solid 0.5px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 #side_profile > #profile_view {
   text-align: center;
@@ -107,7 +163,7 @@
 /* end of profile part*/
 
 #feed {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   float: left;
   width: 52%;
   padding-left: 40px;
@@ -137,28 +193,24 @@
   -o-border-radius: 50%;
 }
 /*uploded image*/
- #display_image{
-
+#display_image {
   width: 100%;
   align-items: center;
- #display_image {
+}
+#display_image {
   width: 55%;
   align-content: center;
- 
-   height: 200px;
+
+  height: 200px;
   /* border: 1px solid black; */
   background-position: center;
   background-size: cover;
   /* padding: 5px 10px; */
   margin: 20px;
-
 }
-#display_image>img
-{
+#display_image > img {
   width: 35%;
   height: auto;
-
-
 }
 #feed > #post > #tex_post {
   background: #e9e7e7;
@@ -179,7 +231,6 @@
   padding-left: 35px;
   cursor: pointer;
   font-size: 28px;
- 
 }
 
 #feed > #post > #button_post {
@@ -211,7 +262,6 @@
   /* flex
   display: flex;
     flex-direction: row; */
- 
 }
 #feed > #top_profile > .top {
   float: left;
@@ -220,7 +270,6 @@
   width: 90px;
   height: 130px;
   background-color: #d7ddd6c5;
- 
 }
 #feed > #top_profile > .top > img {
   height: 45px;
@@ -336,8 +385,7 @@
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
-#feed > #users_posts > .first_post > .pp >.post_image
-{
+#feed > #users_posts > .first_post > .pp > .post_image {
   width: 50%;
   height: auto;
 }
