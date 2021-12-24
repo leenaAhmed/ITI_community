@@ -9,7 +9,7 @@
       "lastname": "Ahmed",
       "info": "bla bla bla",
       "track": "System Development",
-      "profilepic": "3.jpg",
+      "profilepic": "../assest/image/5.jpg",
       "socialNetwork": {
         "facebook": "https://www.facebook.com/linaahmed",
         "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
@@ -25,7 +25,7 @@
       "lastname": "amgad",
       "info": "bla bla bla",
       "track": "System Development",
-      "profilepic": "5.jpg",
+      "profilepic": "../assest/image/5.jpg",
       "socialNetwork": {
         "facebook": "https://www.facebook.com/linaahmed",
         "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
@@ -37,11 +37,11 @@
       "email": "linaahmed@gmail.com",
       "password": "1234567",
       "role": "admin",
-      "Fristname": "ehsan",
-      "lastname": "mohamed",
+      "Fristname": "Ehsan",
+      "lastname": "Mohamed",
       "info": "bla bla bla",
       "track": "System Development",
-      "profilepic": "4.jfif",
+      "profilepic": "../assest/image/3.jpg",
       "socialNetwork": {
         "facebook": "https://www.facebook.com/linaahmed",
         "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
@@ -57,7 +57,7 @@
       "lastname": "Ahmed",
       "info": "bla bla bla",
       "track": "System Development",
-      "profilepic": "profile.png",
+      "profilepic": "../assest/image/profile.jpg",
       "socialNetwork": {
         "facebook": "https://www.facebook.com/linaahmed",
         "linkedin": "https://www.linkedin.com/in/lina-ahmed98",

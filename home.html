@@ -56,19 +56,20 @@
 
                 </div>
                 <div class="profile_img">
-                    <img src="../assest/image/3.jpg" />
+                    <!-- <img src="../assest/image/3.jpg" /> -->
+                     <img id="imguser" src="" />
                 </div>
             </div>
             <div id="profile_info">
-                <p>name</p>
-                <p>job</p>
+                <p id="Nameuser"></p> 
+                <p id="Jopuser"></p>
             </div>
             <div id="profile_following">
-                following
+                Following
                 <p>5</p>
             </div>
             <div id="profile_followers">
-                followers
+                Followers
                 <p>5</p>
             </div>
             <div id="profile_view">
@@ -78,7 +79,8 @@
         </aside>
         <aside id="feed">
             <section id="post">
-                <img class="profile_img" src="../assest/image/3.jpg">
+               
+                <img class="profile_img" src="">
                 <!--to display the images-->
                  <!-- <div id="display_image" ></div> -->
                 <textarea id="tex_post" placeholder="post"></textarea>
@@ -90,7 +92,7 @@
                     <i onclick="changefont()" class="fas fa-font"></i>
                     <i onclick="changecolor()" class="fas fa-fill"></i>
                 </div>
-                <button id="button_post">Post</button>
+                <button id="button_post" onclick="addpost()">Post</button>
             </section>
             <div class="clearfix"></div>
 
@@ -139,14 +141,38 @@
             </section>
             <div class="clearfix"></div>
             <section id="users_posts">
-                <div id="first_post">
+                <div class="first_post"  id="hpost" style="display : none;" >
                     <header class="head_post">
-                        <img>
-                        <p>USER NAME</p>
+                        <img class="profile_img">
+                        <p class="post_us"></p>
+                        <time class="post_time"></time>
+                    </header>
+                    <div class="pp">
+                        <p id="val"></p>
+                        <img src="">
+                        <button>
+                            <i class="far fa-thumbs-up"></i>
+                            Like
+                        </button>
+                        <button>
+                            <i class="fas fa-comments"></i>
+                            Comment
+                        </button>
+                        <div class="comment">
+                            <img class="profile_img">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="first_post" >
+                    <header class="head_post">
+                        <img class="profile_img">
+                        <p class="post_us"></p>
                         <time>mon jan 18 2021</time>
                     </header>
-                    <div id="pp">
-                        <p>this is my first post</p>
+                    <div class="pp">
+                        <p class="val">the second post</p>
 
                         <button>
                             <i class="far fa-thumbs-up"></i>
@@ -156,12 +182,37 @@
                             <i class="fas fa-comments"></i>
                             Comment
                         </button>
-                        <div id="comment">
-                            <img>
+                        <div class="comment">
+                            <img class="profile_img">
                             <textarea></textarea>
                         </div>
                     </div>
                 </div>
+                <div class="first_post" >
+                    <header class="head_post">
+                        <img class="profile_img">
+                        <p class="post_us"></p>
+                        <time>mon jan 18 2021</time>
+                    </header>
+                    <div class="pp">
+                        <p class="val">the second post</p>
+                        <img class="post_image" src="assest/image/iti-logo.png">
+                        <br>
+                        <button>
+                            <i class="far fa-thumbs-up"></i>
+                            Like
+                        </button>
+                        <button>
+                            <i class="fas fa-comments"></i>
+                            Comment
+                        </button>
+                        <div class="comment">
+                            <img class="profile_img">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                </div>
+                
             </section>
         </aside>
     </div>
@@ -170,131 +221,21 @@
 
 <!--js for home page-->
 <script>
-    /*icons for post*/
-    /*first icon*/
-    function uploadefile(){
-        var place=document.getElementById("post");
-        var place1=document.getElementById("tex_post");
-       var newElement= document.createElement("div");
-       newElement.setAttribute("id","display_image");
-        place.insertBefore(newElement, place1);
-       
-        // <div id="display_image" ></div>
-    const image_input = document.querySelector("#uploade");
-    var uploaded_image;
-    image_input.addEventListener('change', function() {
-    const reader = new FileReader();
-    reader.addEventListener('load', () => {
-    uploaded_image = reader.result;
-    document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
-    });
-    reader.readAsDataURL(this.files[0]);
-    });
-      console.log(place);
-
-    }
-    /*second icon*/
-    function changealign()
-    {
-        var align=["center","right","left"];
-
-        var result=align[Math.floor(Math.random()*align.length)];
-        var textbox = document.getElementById("tex_post");
-        textbox.style.textAlign=result;
-
-    }
-     /*third icon*/
-     function changefont()
-    {
-        var align=["sans-serif","serif","cursive","monospace"];
-
-        var result=align[Math.floor(Math.random()*align.length)];
-        var textbox = document.getElementById("tex_post");
-        textbox.style.fontFamily=result;
-        // var textbox = document.getElementById("tex_post");
-        // textbox.style.fontSize=
-
-    }
-     /*4 icon*/
-     function changecolor()
-    {
-        var align=["red","black","blue","green","brown"];
-
-        var result=align[Math.floor(Math.random()*align.length)];
-        var textbox = document.getElementById("tex_post");
-        textbox.style.color=result;
-
-    }
+  
 </script>
 
-    <!-- <script src="script.js"></script>
--->
+   
 
     <script src="js/slider.js"></script>
+    <script src="js/home.js"></script>
 
 
   
-   <!-- <script src="js/slider.js"></script> -->
+  
  
 
 <!--js for home page-->
-<script>
-    /*icons for post*/
-    /*first icon*/
-    function uploadefile(){
-        var place=document.getElementById("post");
-        var place1=document.getElementById("tex_post");
-       var newElement= document.createElement("div");
-       newElement.setAttribute("id","display_image");
-        place.insertBefore(newElement, place1);
-       
-        // <div id="display_image" ></div>
-    const image_input = document.querySelector("#uploade");
-    var uploaded_image;
-    image_input.addEventListener('change', function() {
-    const reader = new FileReader();
-    reader.addEventListener('load', () => {
-    uploaded_image = reader.result;
-    document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
-    });
-    reader.readAsDataURL(this.files[0]);
-    });
-      console.log(place);
 
-    }
-    /*second icon*/
-    function changealign()
-    {
-        var align=["center","right","left"];
-
-        var result=align[Math.floor(Math.random()*align.length)];
-        var textbox = document.getElementById("tex_post");
-        textbox.style.textAlign=result;
-
-    }
-     /*third icon*/
-     function changefont()
-    {
-        var align=["sans-serif","serif","cursive","monospace"];
-
-        var result=align[Math.floor(Math.random()*align.length)];
-        var textbox = document.getElementById("tex_post");
-        textbox.style.fontFamily=result;
-        // var textbox = document.getElementById("tex_post");
-        // textbox.style.fontSize=
-
-    }
-     /*4 icon*/
-     function changecolor()
-    {
-        var align=["red","black","blue","green","brown"];
-
-        var result=align[Math.floor(Math.random()*align.length)];
-        var textbox = document.getElementById("tex_post");
-        textbox.style.color=result;
-
-    }
-</script>
 
     
 

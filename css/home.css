@@ -19,6 +19,8 @@
     flex-direction: row;
 }
 #side_profile {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16;
   text-align: center;
   float: left;
   width: 22%;
@@ -82,13 +84,15 @@
 }
 #side_profile > #profile_info > p {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 #side_profile > #profile_following,
 #profile_followers {
   text-align: center;
   font-size: 25px;
   border-bottom: solid 0.5px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 #side_profile > #profile_view {
   text-align: center;
@@ -98,6 +102,7 @@
 /* end of profile part*/
 
 #feed {
+  font-family: 'Source Sans Pro', sans-serif;
   float: left;
   width: 52%;
   padding-left: 40px;
@@ -119,7 +124,7 @@
 #feed > #post > .profile_img {
   height: 50px;
   width: 50px;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -128,15 +133,23 @@
 }
 /*uploded image*/
 #display_image{
-  
-  width: 55%;
-  align-content: center;
+
+  width: 100%;
+  align-items: center;
   height: 200px;
   /* border: 1px solid black; */
   background-position: center;
   background-size: cover;
   /* padding: 5px 10px; */
   margin: 20px;
+
+}
+#display_image>img
+{
+  width: 35%;
+  height: auto;
+
+
 }
 #feed > #post > #tex_post {
   background: #e9e7e7;
@@ -158,7 +171,7 @@
   cursor: pointer;
   font-size: 28px;
 
-  
+
 }
 
 #feed > #post > #button_post {
@@ -190,7 +203,7 @@
   /* flex
   display: flex;
     flex-direction: row; */
-  
+
 }
 #feed > #top_profile > .top {
   float: left;
@@ -199,7 +212,7 @@
   width: 90px;
   height: 130px;
   background-color: #d7ddd6c5;
-  
+
 }
 #feed > #top_profile > .top > img {
   height: 45px;
@@ -230,7 +243,8 @@
 }
 /*end top profile*/
 /*posts*/
-#feed > #users_posts > #first_post {
+#feed > #users_posts > .first_post {
+  /* visibility:hidden; */
   align-content: center;
   /* border: solid 1px; */
   width: 100%;
@@ -241,40 +255,40 @@
   -webkit-box-shadow: 22px 22px 21px -11px rgba(43, 37, 37, 0.45);
   -moz-box-shadow: 22px 22px 21px -11px rgba(43, 37, 37, 0.45);
 }
-#feed > #users_posts > #first_post > .head_post {
+#feed > #users_posts > .first_post > .head_post {
   float: left;
   width: 100%;
   padding: 15px;
   margin: 15;
 }
-#feed > #users_posts > #first_post > .head_post > p {
+#feed > #users_posts > .first_post > .head_post > p {
   float: left;
   padding: 12px;
   font-size: 17px;
 }
-#feed > #users_posts > #first_post > .head_post > time {
+#feed > #users_posts > .first_post > .head_post > time {
   float: right;
   font-size: 12px;
   padding: 15px;
 }
-#feed > #users_posts > #first_post > .head_post > img {
+#feed > #users_posts > .first_post > .head_post > img {
   float: left;
   height: 45px;
   width: 45px;
-  background-color: rgb(238, 172, 87);
+  /* background-color: rgb(238, 172, 87); */
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-#feed > #users_posts > #first_post > #pp {
+#feed > #users_posts > .first_post > .pp {
   width: 90%;
   height: auto;
   padding: 25px;
   text-align: center;
 }
-#feed > #users_posts > #first_post > #pp > button {
+#feed > #users_posts > .first_post > .pp > button {
   float: left;
   width: 50%;
   margin-top: 20px;
@@ -282,30 +296,30 @@
   font-size: 18px;
   height: 40px;
 }
-#feed > #users_posts > #first_post > #pp > button:hover {
+#feed > #users_posts > .first_post > .pp > button:hover {
   /* نغير اللون هنا !!!*/
-  background-color: #3dc01c;
+  background-color: #34a118;
   color: #fff;
 }
-#feed > #users_posts > #first_post > #comment {
+#feed > #users_posts > .first_post > .comment {
   width: 100%;
   margin-top: 20px;
   border: none;
   padding: 15px;
   height: 40px;
 }
-#feed > #users_posts > #first_post > #pp > #comment > img {
+#feed > #users_posts > .first_post > .pp > .comment > img {
   float: left;
   height: 35px;
   width: 35px;
-  background-color: rgb(238, 172, 87);
+  /* background-color: rgb(238, 172, 87); */
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-#feed > #users_posts > #first_post > #pp > #comment > textarea {
+#feed > #users_posts > .first_post > .pp > .comment > textarea {
   width: 90%;
   text-align: center;
   border-radius: 20px;
@@ -313,4 +327,9 @@
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+}
+#feed > #users_posts > .first_post > .pp >.post_image
+{
+  width: 50%;
+  height: auto;
 }
