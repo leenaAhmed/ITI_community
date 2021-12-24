@@ -22,6 +22,7 @@
 }
 .profile_right_side {
   border-radius: 10px;
+  height: 612px;
 }
 #side_profile {
   font-family: "Source Sans Pro", sans-serif;
@@ -37,7 +38,7 @@
   display: flex;
   flex-direction: column;
 }
-/* leena post style */
+/*  post style */
 .post-container {
   background-color: #fff;
   border-radius: 5px;
@@ -64,11 +65,14 @@
   padding-left: 15%;
   padding-right: 2%;
 }
+.post__body__container {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 7px;
+}
 .post--body textarea {
   width: 100%;
   border: 0;
   outline: 0;
-  border-bottom: 1px solid #ccc;
   resize: none;
 }
 .post__body--icon {
@@ -88,56 +92,85 @@
   font-size: 18px;
   border: none;
   padding: 5px 20px;
-  border-radius: 10px;
+  border-radius: 2px;
   box-shadow: 1px 1px 3px #8080807d;
   color: var(--color);
 }
-/* leena post style */
-#side_profile > div {
-  height: 100px;
-  padding-top: 15px;
+/*  post style */
+
+/* start users posts style */
+.users__posts-card {
+  background-color: #fff;
+  padding: 0.5em;
+  border-radius: 6px;
 }
-#side_profile > #imgpro {
-  position: relative;
-}
-#side_profile .profile_img img {
-  width: 134px;
-  height: 131px;
+.users_posts-info img {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  border: 2px solid #fff;
 }
-#side_profile .profile_img {
-  top: -110px;
-  margin-bottom: 109px;
+.users_posts-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px;
 }
-#side_profile > #imgpro > #profile_background {
-  width: auto;
-  height: 100px;
-  /* put background image here instead of background-color */
-  background-color: var(--background-secondary);
-  /*to put profile img above it*/
-  position: relative;
-  top: 0;
-  left: 0;
+.users_profile {
+  display: flex;
+}
+.users__profile_time {
+  margin-left: 20px;
+}
+.users__profile_time p {
+  text-align: start;
+  padding-bottom: 5px;
+}
+.users__profile__body {
+  padding: 20px;
+}
+.users__profile__body p {
+  text-align: start;
+  padding-bottom: 20px;
+}
+.users__profile__galary img {
+  width: 100%;
+  border-radius: 6px;
+}
+.user__couter--likes {
+  text-align: start;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  color: blue;
+}
+.users__profile__react {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.users__comment {
+  display: flex;
+  align-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.users__profile__comments img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.users__profile__comments textarea {
+  width: 90%;
+  border: 0;
+  outline: 0;
+  border: 1px solid #ccc;
   border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
+  resize: none;
+  padding: 10px;
 }
-#side_profile > #imgpro > .profile_img {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  /*position to make the profile img above the background*/
-  top: 5%;
-  left: 24%;
-}
+/* end  users posts style */
+
 #side_profile > #profile_info {
   padding-top: 40px;
   text-align: center;
@@ -263,41 +296,7 @@
   display: flex;
     flex-direction: row; */
 }
-#feed > #top_profile > .top {
-  float: left;
-  padding: 10px;
-  margin: 10px;
-  width: 90px;
-  height: 130px;
-  background-color: #d7ddd6c5;
-}
-#feed > #top_profile > .top > img {
-  height: 45px;
-  width: 45px;
-  background-color: rgb(238, 172, 87);
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-#feed > #top_profile > .top > button {
-  background-color: var(--btn-primary);
-  width: 65px;
-  height: 27px;
-  border: none;
-  color: var(--layout-primary);
-  font-size: 18px;
-}
-#feed > #top_profile > .top > button:hover {
-  background-color: brown;
-  color: #fff;
-  width: 65px;
-  height: 27px;
-  border: none;
-  color: var(--layout-primary);
-  font-size: 18px;
-}
+
 /*end top profile*/
 /*posts*/
 #feed > #users_posts > .first_post {

@@ -68,7 +68,7 @@ function displaycookie() {
     displaycookie();
     userFullName.innerHTML = `${_fname} ${_lName} `;
     userTrack.innerHTML = `${_Track}`;
-    bio.innerHTML = `${bio}`;
+    bio.innerHTML = `${_bio}`;
 
     path = `"/assest/image/${profile}"`;
 

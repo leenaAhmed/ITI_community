@@ -38,7 +38,7 @@ function displayFollowers(followers) {
       <div class="slider__container__card">
       <img src="./assest/image/${profilepic}" alt="" srcset="">
       <h3 class="slider__username"> ${Fristname} ${lastname}</h3>
-      <button class="slider__button__follow follow" onclick=buttonFollower(event)>Follow</button>
+      <button class="slider__button__follow follow" onclick="buttonFollower(event)">Follow</button>
   </div>
        `;
     })
