@@ -34,6 +34,11 @@ logIn.addEventListener("click", function (e) {
     for(var i=0; i<arr.length;i++){
       if(arr[i] == email.value){
         window.open("profile.html");
+      }else{
+        if (confirm("you are not have an account/Are you want sign Up? ") == true) {
+          window.open("index.html");
+        }
+        
       }
     }
   }
