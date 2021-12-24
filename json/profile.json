@@ -9,7 +9,7 @@
       "lastname": "Ahmed",
       "info": "bla bla bla",
       "track": "System Development",
-      "profilepic": "../assest/image/5.jpg",
+      "profilepic": "5.jpg",
       "socialNetwork": {
         "facebook": "https://www.facebook.com/linaahmed",
         "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
@@ -25,7 +25,7 @@
       "lastname": "amgad",
       "info": "bla bla bla",
       "track": "System Development",
-      "profilepic": "../assest/image/5.jpg",
+      "profilepic": "5.jpg",
       "socialNetwork": {
         "facebook": "https://www.facebook.com/linaahmed",
         "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
@@ -41,7 +41,7 @@
       "lastname": "Mohamed",
       "info": "bla bla bla",
       "track": "System Development",
-      "profilepic": "../assest/image/3.jpg",
+      "profilepic": "3.jpg",
       "socialNetwork": {
         "facebook": "https://www.facebook.com/linaahmed",
         "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
@@ -57,7 +57,7 @@
       "lastname": "Ahmed",
       "info": "bla bla bla",
       "track": "System Development",
-      "profilepic": "../assest/image/profile.jpg",
+      "profilepic": "profile.jpg",
       "socialNetwork": {
         "facebook": "https://www.facebook.com/linaahmed",
         "linkedin": "https://www.linkedin.com/in/lina-ahmed98",
