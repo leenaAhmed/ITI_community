@@ -8,16 +8,17 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="icon" href="../assest/image/iti-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel='stylesheet' href="./css/stylee.css" />
 
     <link rel='stylesheet' href='./css/profile.css'>
+    <link rel='stylesheet' href="./css/stylee.css" />
+
 </head>
 
 <body>
     <header id="head">
         <nav id="logohome">
             <!--tag for logo as a icon maybe-->
-            <p id="iticom"> Community</p>
+            <p id="iticom"> <a href="./home.html">Community</a></p>
         </nav>
         <nav id="nav_head">
             <!--put in href the page ypu create !!!-->
@@ -36,6 +37,9 @@
             <div class="img-cont">
                 <img id="ProfileImg" src="./assest/image/1.jpeg">
                 <button id="edit-profile" class="btn">Edit Profile</button>
+            </div>
+            <div class="profile_data">
+                <p class="grayTxt" id="profile_bio"> </p>
             </div>
             <div class="profile_data">
                 <p class="grayTxt"> Following</p>
@@ -72,8 +76,9 @@
         </div>
         <div class="profile_top_info timeline">
             <div>
-                <h2 id="UserFullName"> Lina Ahmed</h2>
-                <h4 class="grayTxt" id="UserTrack"> front-end&& cross platform</h4>
+                <h2 id="UserFullName"> </h2>
+                <h4 class="grayTxt" id="UserTrack"> </h4>
+
             </div>
             <div id="tabs">
                 <ul>
@@ -85,7 +90,7 @@
                             <i class="fa fa-info-circle"></i>
                             <i>Info</i>
                         </a></li>
-                    <!-- <li><a href="#tabs-3">Aenean lacinia</a></li> -->
+                    <li><a href="#tabs-3">Aenean lacinia</a></li>
                 </ul>
                 <div class="clearfix"></div>
                 <div id="myposts" class="myposts">
@@ -119,33 +124,33 @@
                 <h4>Choose cover photo</h4>
                 <div class="imgs">
                     <label>
-                        <input type="radio" name="cvr" value="img/c1.jpg" checked>
+                        <input type="radio" name="cvr" value="assest/image/c1.jpg" checked>
                         <img src="../assest/image/c1.jpg">
                     </label>
 
                     <label>
-                        <input type="radio" name="cvr" value="img/c2.jpg">
+                        <input type="radio" name="cvr" value="assest/image/c5.jpg">
                         <img src="../assest/image/c5.jpg">
                     </label>
                     <label>
-                        <input type="radio" name="cvr" value="img/c3.jpg" checked>
+                        <input type="radio" name="cvr" value="assest/image/c3.jpg" checked>
                         <img src="../assest/image/c5.jpg">
                     </label>
 
                     <label>
-                        <input type="radio" name="cvr" value="img/c4.jpg">
+                        <input type="radio" name="cvr" value="assest/image/c5.jpg">
                         <img src="../assest/image/c5.jpg">
                     </label>
                     <label>
-                        <input type="radio" name="cvr" value="img/c5.jpg">
+                        <input type="radio" name="cvr" value="assest/image/c5.jpg">
                         <img src="../assest/image/c5.jpg">
                     </label>
                     <label>
-                        <input type="radio" name="cvr" value="img/c6.jpg">
+                        <input type="radio" name="cvr" value="assest/image/c5.jpg">
                         <img src="../assest/image/c5.jpg">
                     </label>
                 </div>
-                <button class="btn" onclick="selectCover()">Select</button>
+                <button class="btn" id="selectCover">Select</button>
             </div>
         </div>
         <!-- end modal -->
@@ -175,7 +180,7 @@
                         </tr>
                         <tr>
                             <td><label>Profile Image</label></td>
-                            <td><input type="file" accept="image/*" class="EditProfileImg" name="ProfileImg"></td>
+                            <td><input type="file" id="EditProfileImg" accept="image/*" name="ProfileImg" /></td>
                         </tr>
                     </table>
 
@@ -185,6 +190,7 @@
         </div>
     </div>
     <script src="./js/model.js"></script>
+    <script src="./js/profile.js"></script>
     <script src="./js/home.js"></script>
 </body>
 

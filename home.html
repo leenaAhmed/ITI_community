@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../stylee.css"> -->
 
     <link rel="stylesheet" type="text/css" href="./css/stylee.css" />
-    <link rel="stylesheet" href="./css/home.css">
 
     <!--font awesome for icons-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -26,7 +25,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/profile.css" />
     <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/home.css">
+
     <link rel="icon" href="assest/image/iti-logo.png">
 
     <title>ITI community</title>
@@ -37,7 +39,7 @@
     <header id="head">
         <nav id="logohome">
             <!--tag for logo as a icon maybe-->
-            <p id="iticom"> Community</p>
+            <p id="iticom"> <a href="./home.html">Community</a></p>
         </nav>
         <nav id="nav_head">
             <!--put in href the page ypu create !!!-->
@@ -45,11 +47,13 @@
             <a href="#frindes" class="iti-bar-item-button">Friends</a>
             <a href="./profile.html" class="iti-bar-item-button">Profile</a>
             <a href="#logout" class="iti-bar-item-button">Logout</a>
+            <a id="themnavigation"> <i class="fas fa-moon themnavigation"></i></a>
+
         </nav>
     </header>
     <!-- Page Container -->
     <div id="Container">
-        <aside id="side_profile">
+         <aside id="side_profile">
             <!--all this info we will get it from DB-->
             <div id="imgpro">
                 <div id="profile_background">
@@ -71,22 +75,44 @@
             <div id="profile_followers">
                 Followers
                 <p>5</p>
+ 
+        <div class="profile_right_side">
+            <div class="img">
+                <img id="ProfileImg" src="./assest/image/1.jpeg">
             </div>
-            <div id="profile_view">
-                <p><a href="./profile.html">View Profile</a></p>
+            <div class="profile_data">
+                <h2 id="UserFullName"> </h2>
+                <h4 class="grayTxt" id="UserTrack"> </h4>
             </div>
+            <div class="profile_data">
+                <p class="grayTxt"> Following</p>
+                <p id="profileFolowing"></p>
+            </div>
+            <div class="profile_data">
+                <p class="grayTxt">Followers</p>
+                <p id="profileFollowers"></p>
+             </div>
 
-        </aside>
+            <div class="profile_data">
+                <h1 class="view__title"> <a href="./profile.html"> View Profile</a> </h1>
+
+            </div>
+            <!-- </div> -->
+        </div>
+        <!--all this info we will get it from DB-->
+
+        <!-- </aside> -->
         <aside id="feed">
             <section id="post">
                
                 <img class="profile_img" src="">
                 <!--to display the images-->
-                 <!-- <div id="display_image" ></div> -->
+                <!-- <div id="display_image" ></div> -->
                 <textarea id="tex_post" placeholder="post"></textarea>
                 <div id="icons_post">
                     <!-- take care image will be uoloaded file -->
-                   <label  onclick="uploadefile()" style="cursor: pointer;" for="uploade"> <i class="fas fa-images"></i> </label>
+                    <label onclick="uploadefile()" style="cursor: pointer;" for="uploade"> <i class="fas fa-images"></i>
+                    </label>
                     <input type="file" id="uploade" style="display: none; visibility: hidden;">
                     <i onclick="changealign()" class="fas fa-align-left"></i>
                     <i onclick="changefont()" class="fas fa-font"></i>
@@ -217,7 +243,7 @@
         </aside>
     </div>
 
-
+ 
 
 <!--js for home page-->
 <script>
@@ -240,6 +266,71 @@
     
 
   
+ 
+    <script src="js/slider.js"></script>
+
+    <script src="js/them.js"></script>
+    <script src="js/profile.js"></script>
+    <!--js for home page-->
+    <script>
+        /*icons for post*/
+        /*first icon*/
+        function uploadefile() {
+            var place = document.getElementById("post");
+            var place1 = document.getElementById("tex_post");
+            var newElement = document.createElement("div");
+            newElement.setAttribute("id", "display_image");
+            place.insertBefore(newElement, place1);
+
+            // <div id="display_image" ></div>
+            const image_input = document.querySelector("#uploade");
+            var uploaded_image;
+            image_input.addEventListener('change', function () {
+                const reader = new FileReader();
+                reader.addEventListener('load', () => {
+                    uploaded_image = reader.result;
+                    document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+                });
+                reader.readAsDataURL(this.files[0]);
+            });
+            console.log(place);
+
+        }
+        /*second icon*/
+        function changealign() {
+            var align = ["center", "right", "left"];
+
+            var result = align[Math.floor(Math.random() * align.length)];
+            var textbox = document.getElementById("tex_post");
+            textbox.style.textAlign = result;
+
+        }
+        /*third icon*/
+        function changefont() {
+            var align = ["sans-serif", "serif", "cursive", "monospace"];
+
+            var result = align[Math.floor(Math.random() * align.length)];
+            var textbox = document.getElementById("tex_post");
+            textbox.style.fontFamily = result;
+            // var textbox = document.getElementById("tex_post");
+            // textbox.style.fontSize=
+
+        }
+        /*4 icon*/
+        function changecolor() {
+            var align = ["red", "black", "blue", "green", "brown"];
+
+            var result = align[Math.floor(Math.random() * align.length)];
+            var textbox = document.getElementById("tex_post");
+            textbox.style.color = result;
+
+        }
+
+    </script>
+
+
+
+ 
 
 </body>
 

@@ -1,6 +1,5 @@
-*
-{
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
 /* container of the page */
 #Container {
@@ -16,7 +15,13 @@
   /* border: solid; */
   /*flex*/
   display: flex;
-    flex-direction: row;
+  flex-direction: row;
+}
+.profile_right_side .profile_data .view__title a {
+  font-size: 0.5em;
+}
+.profile_right_side {
+  border-radius: 10px;
 }
 #side_profile {
   font-family: 'Source Sans Pro', sans-serif;
@@ -30,7 +35,7 @@
   -moz-box-shadow: 22px 22px 21px -11px rgba(43, 37, 37, 0.45);
 
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
 }
 #side_profile > div {
   height: 100px;
@@ -109,7 +114,7 @@
   padding-top: 15px;
   /*flex*/
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
 }
 #feed > #post {
   /* border: solid 1px; */
@@ -132,11 +137,15 @@
   -o-border-radius: 50%;
 }
 /*uploded image*/
-#display_image{
+ #display_image{
 
   width: 100%;
   align-items: center;
-  height: 200px;
+ #display_image {
+  width: 55%;
+  align-content: center;
+ 
+   height: 200px;
   /* border: 1px solid black; */
   background-position: center;
   background-size: cover;
@@ -170,8 +179,7 @@
   padding-left: 35px;
   cursor: pointer;
   font-size: 28px;
-
-
+ 
 }
 
 #feed > #post > #button_post {
@@ -203,7 +211,7 @@
   /* flex
   display: flex;
     flex-direction: row; */
-
+ 
 }
 #feed > #top_profile > .top {
   float: left;
@@ -212,7 +220,7 @@
   width: 90px;
   height: 130px;
   background-color: #d7ddd6c5;
-
+ 
 }
 #feed > #top_profile > .top > img {
   height: 45px;
