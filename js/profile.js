@@ -12,6 +12,9 @@ var newProfileImg = document.getElementById("EditProfileImg");
 // ProfileImg
 var proFileImg = document.getElementById("ProfileImg");
 var editprofileInfo = document.getElementById("editProfileBtn");
+// cover
+var coverImg = document.getElementById("profileCover");
+var selectCover = document.getElementById("selectCover");
 var path;
 // function changealign
 
@@ -35,6 +38,7 @@ function setCookie() {
   document.cookie = "Email=" + emailEdite.value + ";expires=" + d;
   document.cookie = "BIO=" + bioEdite.value + ";expires=" + d;
   document.cookie = "EditProfileImg=" + newProfileImg.value + ";expires=" + d;
+  document.cookie = "coverImage=" + coverImg.src + ";expires=" + d;
 }
 function displaycookie() {
   var getcookie = getcookies();
@@ -45,16 +49,19 @@ function displaycookie() {
   var _Track = getcookie["Track"];
   var _Email = getcookie["Email"];
   var _bio = getcookie["BIO"];
-
+  var _coverprofile = getcookie["coverImage"];
   var _newProfileImg = getcookie["EditProfileImg"];
 
   var profile = _newProfileImg.replace(/C:\\fakepath\\/g, "");
   console.log(profile);
 
-  userFullName.innerHTML = `${_fname} ${_lName} `;
+  userFullName.innerHTML = `${_fname}  ${_lName} `;
   userTrack.innerHTML = `${_Track}`;
   bio.innerHTML = `${_bio}`;
   proFileImg.src = `/assest/image/${profile}`;
+  console.log(_coverprofile);
+  // coverImg.src = `${_coverprofile}`;
+
   editprofileInfo.addEventListener("click", function (e) {
     setCookie();
     getcookies();
@@ -70,6 +77,17 @@ function displaycookie() {
       document.getElementsByClassName("editModal").style.display = "none";
     }, 100);
     location.reload(true);
+  });
+  selectCover.addEventListener("click", function () {
+    var radio = document.getElementsByName("cvr");
+    for (i = 0; i < radio.length; i++) {
+      if (radio[i].checked) var mysrc = radio[i].value;
+    }
+    console.log(mysrc);
+
+    coverImg.src = mysrc;
+
+    modal.style.display = "none";
   });
 }
 
