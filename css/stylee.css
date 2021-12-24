@@ -15,9 +15,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: var(--layout-primary);
-}
+
 .dark-theme {
   --layout-primary: #0a0a0a;
   --text-primary: #000;

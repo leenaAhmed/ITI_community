@@ -3,7 +3,6 @@
 }
 /* container of the page */
 #Container {
-  background-color: var(--layout-primary);
   height: auto;
   overflow: hidden;
   width: 100%;
@@ -16,12 +15,19 @@
   /*flex*/
   display: flex;
   flex-direction: row;
+  transition: all 0.5s ease-in;
+}
+.dark {
+  background-color:black;
+  color:white;
 }
 .profile_right_side .profile_data .view__title a {
   font-size: 0.5em;
 }
 .profile_right_side {
   border-radius: 10px;
+  transition: all 0.5s ease-in;
+
 }
 #side_profile {
   font-family: "Source Sans Pro", sans-serif;
@@ -43,11 +49,13 @@
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 17px;
+  transition: all 0.5s ease-in;
 }
 .post__user--profile {
   display: flex;
   text-align: center;
   padding: 10px;
+  transition: all 0.5s ease-in;
 }
 .post__user--profile img {
   width: 45px;
@@ -63,6 +71,7 @@
 .post--body {
   padding-left: 15%;
   padding-right: 2%;
+  transition: all 0.5s ease-in;
 }
 .post--body textarea {
   width: 100%;
@@ -91,6 +100,7 @@
   border-radius: 10px;
   box-shadow: 1px 1px 3px #8080807d;
   color: var(--color);
+  transition: all 0.5s ease-in;
 }
 /* leena post style */
 #side_profile > div {
