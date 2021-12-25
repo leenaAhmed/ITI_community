@@ -87,6 +87,7 @@ function displaycookie() {
 }
 var personalPosts = document.getElementById("personal-posts");
 var image;
+var time = new Date();
 function addpost() {
   var valueText = textArea.value.trim();
   if (valueText.length >= 3 || preview.childElementCount >= 1) {
@@ -101,7 +102,7 @@ function addpost() {
             <img id="ProfileImg" src="./assest/image/${profile}">
             <div class="users__profile_time">
                 <p id="UserFullName" >${_profilenam} ${_profileLnam} </p>
-                <div class="time grayTxt"><i class="fa fa-history"></i>  ${new Date().toDateString()}</div>
+                <div class="time grayTxt"><i class="fa fa-history"></i>  ${time.toLocaleString()}  </div>
             </div>
         </div>
         <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
@@ -125,7 +126,7 @@ function addpost() {
     </div>
     <div class="users__profile__react">
         <div onclick="likeFun(this)" class="likeClass"> <i class="far fa-thumbs-up"></i> like</div>
-        <div>
+        <div class="commentsClass>
             <i class="fas fa-comments"></i>
             Comment
         </div>

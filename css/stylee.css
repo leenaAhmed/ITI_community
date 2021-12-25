@@ -1,5 +1,6 @@
 :root {
   --layout-primary: #e9e6e6;
+  --card-bg: #fff;
   --layout-secondary: #901b20;
   --nav-secondary: #0a111a;
   --nav-color: #fff;
@@ -7,8 +8,9 @@
   --text-secondary: #0a111a;
   --background-secondary: #1c2b36;
   --btn-hover: #88b2db;
-  --color: #fff;
+  --color: #000;
   --btn-primary: #901b20;
+  --border: #fff;
 }
 * {
   padding: 0;
@@ -17,10 +19,13 @@
 }
 
 .dark-theme {
+  --border: #fff;
   --layout-primary: #0a0a0a;
+  --card-bg: #000;
   --text-primary: #000;
   --nav-color: #fff;
-  --color: #000;
+  --color: #fff;
+
   --nav-secondary: #901b20;
 }
 .dark-btn-on {

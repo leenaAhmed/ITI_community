@@ -24,10 +24,7 @@ html.dark {
   flex-direction: row;
   transition: all 0.5s ease-in;
 }
-.dark {
-  background-color: black;
-  color: white;
-}
+
 .profile_right_side .profile_data .view__title a {
   font-size: 0.5em;
 }
@@ -53,11 +50,13 @@ html.dark {
 }
 /*  post style */
 .post-container {
-  background-color: #fff;
+  background-color: var(--card-bg);
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 17px;
   transition: all 0.5s ease-in;
+  border: 1px solid var(--border);
+  color: var(--color);
 }
 .post__user--profile {
   display: flex;
@@ -93,7 +92,7 @@ html.dark {
   background: transparent;
   resize: none;
   text-align: start;
-  color: #333;
+  color: var(--color);
 }
 .post--body textarea::placeholder {
   text-align: start;
@@ -125,7 +124,10 @@ html.dark {
 
 /* start users posts style */
 .users__posts-card {
-  background-color: #fff;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+
+  color: var(--color);
   padding: 0.5em;
   border-radius: 6px;
   margin-bottom: 20px;
@@ -184,7 +186,6 @@ html.dark {
 .users__profile__react {
   display: flex;
   justify-content: space-around;
-  padding: 15px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
@@ -208,6 +209,17 @@ html.dark {
   border-radius: 7px;
   resize: none;
   padding: 10px;
+}
+
+.commentsClass,
+.likeClass {
+  padding: 10px;
+  color: var(--color);
+}
+.likeClass:hover,
+.commentsClass:hover {
+  background-color: rgb(19, 103, 151);
+  color: #fff;
 }
 /* end  users posts style */
 
