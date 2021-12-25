@@ -62,7 +62,7 @@ function displayusers(users) {
               <div class="img">
                   <img src="./assest/image/${post.userprofilepic}">
               </div>
-              <textarea rows="3" onkeypress="onTestChange(this);" class="post-text"
+              <textarea rows="3" onkeypress="onTestChange(this);"  
                   placeholder="Write a comment.." 
                   spellcheck="false"></textarea>
           </div>
@@ -96,7 +96,6 @@ function displaycookie() {
   // console.log(getcookie);
   _profilenam = getcookie["firstName"];
   _profileLnam = getcookie["lastName"];
-  homeprofileImg.innerHTML += `${_profilenam} ${_profileLnam} `;
   //
   var _newProfileImg = getcookie["EditProfileImg"];
 
@@ -116,10 +115,10 @@ function onTestChange(me) {
     var comContent = me.value;
     var comm = `
     <div class="users__comment">
-            <div class="img">
+            <div class="imguser">
                 <img src="./assest/image/${profile}">
-                <p><b><a style="text-decoration: none;" href="profile.html"  target="_self"> ${_profilenam} ${_profileLnam} </a></b></p>
-
+                <p><b><a style="text-decoration: none;" href="profile.html"  target="_self"> 
+                  ${_profilenam} ${_profileLnam} </a></b></p>
             </div>
             <div class="post-text">
                <p>${comContent}</p>
