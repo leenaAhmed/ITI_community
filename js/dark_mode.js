@@ -1,7 +1,7 @@
 var toggle = document.querySelector(".toggle");
 
 toggle.addEventListener("click", function (e) {
-  
+  var html = document.querySelector('html');
   var htm = document.getElementById("Container");
   var h = document.getElementsByClassName("profile_right_side")[0];
   var t = document.getElementsByClassName("post__user--profile")[0];
@@ -19,7 +19,7 @@ toggle.addEventListener("click", function (e) {
  
 
   if (
-   
+    html.classList.contains("dark") &&
     htm.classList.contains("dark") &&
     h.classList.contains("dark") &&
     t.classList.contains("dark") &&
@@ -27,7 +27,7 @@ toggle.addEventListener("click", function (e) {
     post.classList.contains("dark") &&
     slider.classList.contains("dark")
   ) {
-    
+    html.classList.remove("dark");
     htm.classList.remove("dark");
     h.classList.remove("dark");
     t.classList.remove("dark");
@@ -36,7 +36,7 @@ toggle.addEventListener("click", function (e) {
     slider.classList.remove("dark");
     
   } else {
-    
+    html.classList.add("dark");
     htm.classList.add("dark");
     h.classList.add("dark");
     t.classList.add("dark");
