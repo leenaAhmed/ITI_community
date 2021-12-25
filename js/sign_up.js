@@ -184,15 +184,6 @@ function setCookie() {
   document.cookie = "BIO=" + bio.value + ";expires=" + d;
 }
 
-  
-   
-  
-
-
-
-  
-
-
 //button of sin up and button of sin in
 document.getElementById("signUp").addEventListener("click", function (e) {
   e.preventDefault();

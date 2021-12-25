@@ -59,5 +59,6 @@ logIn.addEventListener("click", function (e) {
     d.setMonth(d.getMonth() + 6);
     document.cookie = "UserEmail=" + email.value + ";expires=" + d;
     document.cookie = "Passwared=" + passward.value + ";expires=" + d;
+    document.cookie = "id=" + user.id + ";expires=" + d;
   }
 });

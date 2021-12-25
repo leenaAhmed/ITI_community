@@ -25,18 +25,18 @@ html.dark {
   transition: all 0.5s ease-in;
 }
 .dark {
-  background-color:black;
-  color:white;
+  background-color: black;
+  color: white;
 }
 .profile_right_side .profile_data .view__title a {
   font-size: 0.5em;
 }
 .profile_right_side {
   border-radius: 10px;
-   transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 
-   height: 612px;
- }
+  height: 612px;
+}
 #side_profile {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16;
@@ -90,7 +90,14 @@ html.dark {
   width: 100%;
   border: 0;
   outline: 0;
+  background: transparent;
   resize: none;
+  text-align: start;
+  color: #333;
+}
+.post--body textarea::placeholder {
+  text-align: start;
+  color: #333;
 }
 .post__body--icon {
   display: flex;
@@ -163,7 +170,7 @@ html.dark {
   padding-bottom: 20px;
 }
 .users__profile__galary img {
-  width: 100%;
+  width: 50%;
   border-radius: 6px;
 }
 .user__couter--likes {

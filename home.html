@@ -33,7 +33,7 @@
 
     <title>ITI community</title>
     <style>
-       
+
     </style>
 </head>
 
@@ -113,9 +113,8 @@
                 </div>
                 <article class="post--body">
                     <div class="post__body__container">
-                        <textarea name="" id="postTextArea" rows="2" placeholder="tell what you think">
-
-                        </textarea>
+                        <textarea name="postTextArea" id="postTextArea" rows="2"
+                            placeholder="write your thought.. !"></textarea>
                         <div id="preview"></div>
                     </div>
 
@@ -161,7 +160,14 @@
             </section>
             <!---------------------- --------------------------------------------------------------------------------------------- -->
             <div class="clearfix"></div>
+            <section>
+                <div id="personal-posts">
+
+
+                </div>
+            </section>
             <section id="users_posts">
+
                 <!-- <section class="users__posts-card">
                     <div class="users_posts-info">
                         <div class="users_profile">
@@ -266,50 +272,7 @@
 
 
 
-    <!--js for home page-->
 
-
-
-
-
-
-
-    <!--js for home page-->
-    <script>
-        /*icons for post*/
-        /*first icon*/
-
-        /*second icon*/
-        function changealign() {
-            var align = ["center", "right", "left"];
-
-            var result = align[Math.floor(Math.random() * align.length)];
-            var textbox = document.getElementById("tex_post");
-            textbox.style.textAlign = result;
-
-        }
-        /*third icon*/
-        function changefont() {
-            var align = ["sans-serif", "serif", "cursive", "monospace"];
-
-            var result = align[Math.floor(Math.random() * align.length)];
-            var textbox = document.getElementById("tex_post");
-            textbox.style.fontFamily = result;
-            // var textbox = document.getElementById("tex_post");
-            // textbox.style.fontSize=
-
-        }
-        /*4 icon*/
-        function changecolor() {
-            var align = ["red", "black", "blue", "green", "brown"];
-
-            var result = align[Math.floor(Math.random() * align.length)];
-            var textbox = document.getElementById("tex_post");
-            textbox.style.color = result;
-
-        }
-
-    </script>
 
 
     <script src="./js/dark_mode.js"></script>
