@@ -60,6 +60,7 @@
 .post__user--profile p {
   margin-top: 10px;
   margin-left: 10px;
+  text-transform: capitalize;
 }
 .post--body {
   padding-left: 15%;
