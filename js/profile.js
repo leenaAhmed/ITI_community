@@ -2,13 +2,15 @@
 var userFullName = document.getElementById("UserFullName");
 var userTrack = document.getElementById("UserTrack");
 var bio = document.getElementById("profile_bio");
-
+var profileName = document.getElementById("profileFullName");
 // edit variables
 var editname = document.getElementById("FnameEdite");
 var LnameEdite = document.getElementById("LnameEdite");
 var emailEdite = document.getElementById("emailEdite");
 var bioEdite = document.getElementById("bioEdite");
+// profile
 var newProfileImg = document.getElementById("EditProfileImg");
+var homeprofileImg = document.getElementById("homeProfileImg");
 // ProfileImg
 var proFileImg = document.getElementById("ProfileImg");
 var editprofileInfo = document.getElementById("editProfileBtn");
@@ -46,6 +48,8 @@ function displaycookie() {
 
   var _fname = getcookie["firstName"];
   var _lName = getcookie["lastName"];
+  var _profilenam = getcookie["firstName"];
+  var _profileLnam = getcookie["lastName"];
   var _Track = getcookie["Track"];
   var _Email = getcookie["Email"];
   var _bio = getcookie["BIO"];
@@ -57,25 +61,30 @@ function displaycookie() {
 
   userFullName.innerHTML = `${_fname}  ${_lName} `;
   userTrack.innerHTML = `${_Track}`;
-  bio.innerHTML = `${_bio}`;
   proFileImg.src = `/assest/image/${profile}`;
+  bio.innerHTML = `${_bio}`;
   console.log(_coverprofile);
   // coverImg.src = `${_coverprofile}`;
+  // profileName.innerHTML = `${_profilenam} ${_profileLnam}`;
+  // homeprofileImg.src = `/assest/image/${profile}`;
 
   editprofileInfo.addEventListener("click", function (e) {
     setCookie();
     getcookies();
     displaycookie();
     userFullName.innerHTML = `${_fname} ${_lName} `;
+
     userTrack.innerHTML = `${_Track}`;
-    bio.innerHTML = `${bio}`;
 
     path = `"/assest/image/${profile}"`;
 
     proFileImg.src = path;
+    bio.innerHTML = `${_bio}`;
+    // homeprofileImg.src = path;
     setTimeout(function () {
       document.getElementsByClassName("editModal").style.display = "none";
     }, 100);
+
     location.reload(true);
   });
   selectCover.addEventListener("click", function () {

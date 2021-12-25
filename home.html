@@ -106,49 +106,36 @@
 
         <!-- </aside> -->
         <aside id="feed">
-            <!--================================================ @leena post section================================================ -->
             <section class="post-container">
                 <div class="post__user--profile">
-                    <img id="ProfileImg" src="./assest/image/1.jpeg">
-                    <p id="UserFullName">leena</p>
+                    <img id="homeProfileImg" src="./assest/image/1.jpeg">
+                    <p id="profileFullName"></p>
                 </div>
                 <article class="post--body">
-                    <textarea name="" id="postTextArea" rows="2" placeholder="tell what you think"></textarea>
+                    <div class="post__body__container">
+                        <textarea name="" id="postTextArea" rows="2" placeholder="tell what you think">
+
+                        </textarea>
+                        <div id="preview"></div>
+                    </div>
+
                     <div class="post__body--icon">
                         <div class="post__body__textIcons">
                             <label for="postImgs">
                                 <i class="fas fa-images icon"></i>
-                                <img class="upImg" />
                             </label>
-                            <input name="postImgs" id="postImgs" type="file" accept="image/*" multiple>
+                            <input name="postImgs" id="postImgs" type="file" onchange="previewFiles()" accept="image/*"
+                                multiple>
                             <i onclick="changealign()" class="fas fa-align-left icon"></i>
                             <i onclick="changefont()" class="fas fa-font icon"></i>
                             <i onclick="changecolor()" class="fas fa-fill icon"></i>
                         </div>
-                        <button id="post-btn" class="post-btn " onclick="CreatePost()">Post</button>
+                        <button id="post-btn" class="post-btn " onclick="addpost()">Post</button>
                     </div>
                 </article>
             </section>
-            <!--================================================ @leena post section================================================ -->
-            <!-- <section id="post"> -->
 
-            <!-- <img class="profile_img" src=""> -->
-            <!--to display the images-->
-            <!-- <div id="display_image"></div>
-                <textarea id="tex_post" placeholder="post"></textarea>
-                <div id="icons_post"> -->
-            <!-- take care image will be uoloaded file -->
-            <!-- <label onclick="uploadefile()" style="cursor: pointer;" for="uploade"> <i class="fas fa-images"></i>
-                    </label>
-                    <input type="file" id="uploade" style="display: none; visibility: hidden;">
-                    <i onclick="changealign()" class="fas fa-align-left"></i>
-                    <i onclick="changefont()" class="fas fa-font"></i>
-                    <i onclick="changecolor()" class="fas fa-fill"></i>
-                </div>
-                <button id="button_post" onclick="addpost()">Post</button>
-            </section> -->
             <div class="clearfix"></div>
-            <!-- -------------------------------------- @leena Slider------------------------------------------------------------------- -->
             <section class="slider">
                 <h2> Top Frindes</h2>
                 <div class="slider__container" id="slidercontent">
@@ -174,8 +161,62 @@
             </section>
             <!---------------------- --------------------------------------------------------------------------------------------- -->
             <div class="clearfix"></div>
-            <!-- <section id="users_posts">
-                <div class="first_post" id="hpost" style="display : none;">
+            <section id="users_posts">
+                <!-- <section class="users__posts-card">
+                    <div class="users_posts-info">
+                        <div class="users_profile">
+                            <img id="ProfileImg" src="./assest/image/1.jpeg">
+                            <div class="users__profile_time">
+                                <p id="UserFullName">leena</p>
+                                <div class="time grayTxt"><i class="fa fa-history"></i> Fri Dec 24 2021</div>
+                            </div>
+                        </div>
+                        <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+                    </div>
+                    <div class="users__profile__body">
+                        <p class="post-"> postP1</p>
+                        <div class="users__profile__galary">
+                            <div class="imgsContainer">
+                                <div id="newPostImgs">
+                                    <img id="img1" src="./assest/image/1.jpeg" class="left0" title="undefined">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user__couter--likes">
+                        <span id="userLikeCounter">1</span> Likes
+
+                    </div>
+                    <div class="users__profile__react">
+                        <div onclick="likeFun(this)" class="likeClass"> <i class="far fa-thumbs-up"></i> like</div>
+                        <div>
+                            <i class="fas fa-comments"></i>
+                            Comment
+                        </div>
+                    </div>
+                    <div class="users__profile__comments">
+                        <div class="users__comment">
+                            <div class="img">
+                                <img src="./assest/image/1.jpeg">
+                            </div>
+                            <textarea rows="3" onkeypress="onTestChange(this);" class="post-text"
+                                placeholder="Write a comment.." onkeyup="txtautoheight(this)"
+                                spellcheck="false"></textarea>
+                        </div>
+                    </div>
+                </section> -->
+
+
+
+
+
+
+
+
+
+
+                <!-- <div class="first_post" id="hpost">
                     <header class="head_post">
                         <img class="profile_img">
                         <p class="post_us"></p>
@@ -197,58 +238,13 @@
                             <textarea></textarea>
                         </div>
                     </div>
-                </div>
-
-                <div class="first_post">
-                    <header class="head_post">
-                        <img class="profile_img">
-                        <p class="post_us"></p>
-                        <time>mon jan 18 2021</time>
-                    </header>
-                    <div class="pp">
-                        <p class="val">the second post</p>
-
-                        <button>
-                            <i class="far fa-thumbs-up"></i>
-                            Like
-                        </button>
-                        <button>
-                            <i class="fas fa-comments"></i>
-                            Comment
-                        </button>
-                        <div class="comment">
-                            <img class="profile_img">
-                            <textarea></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="first_post">
-                    <header class="head_post">
-                        <img class="profile_img">
-                        <p class="post_us"></p>
-                        <time>mon jan 18 2021</time>
-                    </header>
-                    <div class="pp">
-                        <p class="val">the second post</p>
-                        <img class="post_image" src="assest/image/iti-logo.png">
-                        <br>
-                        <button>
-                            <i class="far fa-thumbs-up"></i>
-                            Like
-                        </button>
-                        <button>
-                            <i class="fas fa-comments"></i>
-                            Comment
-                        </button>
-                        <div class="comment">
-                            <img class="profile_img">
-                            <textarea></textarea>
-                        </div>
-                    </div>
                 </div> -->
 
-            <!-- </section>
-        </aside> -->
+
+
+
+            </section>
+        </aside>
     </div>
 
 
@@ -260,11 +256,13 @@
 
 
 
+    <script src="js/profile.js"></script>
+    <script src="js/post.js"></script>
+
     <script src="js/slider.js"></script>
     <script src="js/home.js"></script>
 
 
-    <script src="js/profile.js"></script>
 
 
 
@@ -280,27 +278,7 @@
     <script>
         /*icons for post*/
         /*first icon*/
-        function uploadefile() {
-            var place = document.getElementById("post");
-            var place1 = document.getElementById("tex_post");
-            var newElement = document.createElement("div");
-            newElement.setAttribute("id", "display_image");
-            place.insertBefore(newElement, place1);
 
-            // <div id="display_image" ></div>
-            const image_input = document.querySelector("#uploade");
-            var uploaded_image;
-            image_input.addEventListener('change', function () {
-                const reader = new FileReader();
-                reader.addEventListener('load', () => {
-                    uploaded_image = reader.result;
-                    document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
-                });
-                reader.readAsDataURL(this.files[0]);
-            });
-            console.log(place);
-
-        }
         /*second icon*/
         function changealign() {
             var align = ["center", "right", "left"];

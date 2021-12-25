@@ -26,8 +26,8 @@
 }
 /* side div */
 .profile_right_side img {
-  width: 190px;
-  height: 186px;
+  width: 164px;
+  height: 164px;
   border-radius: 50%;
   border: 2px solid #fff;
 }
@@ -112,7 +112,9 @@ a {
   margin: 36px 0px;
   min-height: 300px;
 }
-
+#UserFullName {
+  text-transform: capitalize;
+}
 .profile_right_side .profile_data {
   text-align: center;
   border-top: 1px solid #e9e7e7;
