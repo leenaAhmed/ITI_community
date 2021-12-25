@@ -37,7 +37,8 @@
 }
 .profile_right_side {
   width: 23%;
-  background: #fff;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
   float: left;
   box-shadow: 1px 1px 3px #8080807d;
   border-bottom-left-radius: 10px;
