@@ -48,8 +48,7 @@ function displaycookie() {
 
   var _fname = getcookie["firstName"];
   var _lName = getcookie["lastName"];
-  var _profilenam = getcookie["firstName"];
-  var _profileLnam = getcookie["lastName"];
+
   var _Track = getcookie["Track"];
   var _Email = getcookie["Email"];
   var _bio = getcookie["BIO"];
@@ -63,6 +62,12 @@ function displaycookie() {
   userTrack.innerHTML = `${_Track}`;
   proFileImg.src = `/assest/image/${profile}`;
   bio.innerHTML = `${_bio}`;
+
+  // value
+  editname.value = `${_fname}  `;
+  LnameEdite.value = `${_lName}`;
+  emailEdite.value = `${_Email}`;
+  bioEdite.value = `${_bio}`;
   console.log(_coverprofile);
   // coverImg.src = `${_coverprofile}`;
   // profileName.innerHTML = `${_profilenam} ${_profileLnam}`;
@@ -70,7 +75,6 @@ function displaycookie() {
 
   editprofileInfo.addEventListener("click", function (e) {
     setCookie();
-    getcookies();
     displaycookie();
     userFullName.innerHTML = `${_fname} ${_lName} `;
 

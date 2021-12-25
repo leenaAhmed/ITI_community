@@ -20,7 +20,7 @@ xhr.addEventListener("readystatechange", function () {
 });
 
 function paginate(followers) {
-  var itemsPerPage = 3;
+  var itemsPerPage = 4;
   var numberOfPages = Math.ceil(followers.length / itemsPerPage);
 
   var newFollowers = Array.from({ length: numberOfPages }, (_, index) => {

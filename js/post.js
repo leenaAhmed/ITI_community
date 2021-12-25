@@ -1,3 +1,4 @@
+var textArea = document.getElementById("postTextArea");
 function previewFiles() {
   var preview = document.querySelector("#preview");
   var PostImage = document.querySelector("#postImgs").files;
@@ -28,6 +29,31 @@ function previewFiles() {
 }
 
 //
+var resultaligntext;
+function changealign() {
+  var aligntext = ["center", "right", "left"];
+
+  resultaligntext = aligntext[Math.floor(Math.random() * aligntext.length)];
+  // var textbox = document.getElementById("tex_post");
+  textArea.style.textAlign = resultaligntext;
+}
+/*third icon*/
+var resultalignfonts;
+function changefont() {
+  var alignfonts = ["sans-serif", "serif", "cursive", "monospace"];
+
+  resultalignfonts = alignfonts[Math.floor(Math.random() * alignfonts.length)];
+  textArea.style.fontFamily = resultalignfonts;
+}
+/*4 icon*/
+var resultcolor;
+function changecolor() {
+  var aligncolor = ["red", "black", "blue", "green", "brown"];
+
+  resultcolor = aligncolor[Math.floor(Math.random() * aligncolor.length)];
+  // var textbox = document.getElementById("tex_post");
+  textArea.style.color = resultcolor;
+}
 function getcookies() {
   var associativeCookie = [];
   var cookies = document.cookie.split(";"); //
@@ -41,19 +67,81 @@ function getcookies() {
 }
 var newProfileImg = document.getElementById("homeProfileImg");
 var homeprofileImg = document.getElementById("profileFullName");
-
+var _profilenam;
+var _profileLnam;
+var profile;
 function displaycookie() {
   var getcookie = getcookies();
   // console.log(getcookie);
-  var _profilenam = getcookie["firstName"];
-  var _profileLnam = getcookie["lastName"];
+  _profilenam = getcookie["firstName"];
+  _profileLnam = getcookie["lastName"];
   homeprofileImg.innerHTML += `${_profilenam} ${_profileLnam} `;
   //
   var _newProfileImg = getcookie["EditProfileImg"];
 
-  var profile = _newProfileImg.replace(/C:\\fakepath\\/g, "");
+  profile = _newProfileImg.replace(/C:\\fakepath\\/g, "");
+
   newProfileImg.src = `/assest/image/${profile}`;
 
   // console.log(_profilenam);
+}
+var personalPosts = document.getElementById("personal-posts");
+var image;
+function addpost() {
+  var valueText = textArea.value.trim();
+  if (valueText.length >= 3 || preview.childElementCount >= 1) {
+    for (var i = 0; i < preview.children.length; i++) {
+      image = preview.children[i];
+    }
+    console.log(image);
+    personalPosts.innerHTML += `
+    <section class="users__posts-card">
+    <div class="users_posts-info">
+        <div class="users_profile">
+            <img id="ProfileImg" src="./assest/image/${profile}">
+            <div class="users__profile_time">
+                <p id="UserFullName" >${_profilenam} ${_profileLnam} </p>
+                <div class="time grayTxt"><i class="fa fa-history"></i>  ${new Date().toDateString()}</div>
+            </div>
+        </div>
+        <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+    </div>
+    <div class="users__profile__body">
+        <p class="post-"  style = "text-align:${resultaligntext}; color:${resultcolor}; font-family:${resultalignfonts};">${valueText}</p>
+        <div class="users__profile__galary">
+            <div class="imgsContainer">
+                <div id="newPostImgs">
+                    <img id="img1" src="${
+                      image.src
+                    }" class="left0" title="undefined">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="user__couter--likes">
+        <span id="userLikeCounter"></span> Likes
+
+    </div>
+    <div class="users__profile__react">
+        <div onclick="likeFun(this)" class="likeClass"> <i class="far fa-thumbs-up"></i> like</div>
+        <div>
+            <i class="fas fa-comments"></i>
+            Comment
+        </div>
+    </div>
+    <div class="users__profile__comments">
+        <div class="users__comment">
+            <div class="img">
+                <img src="./assest/image/${profile}">
+            </div>
+            <textarea rows="3" onkeypress="onTestChange(this);" class="post-text"
+                placeholder="Write a comment.." onkeyup="txtautoheight(this)"
+                spellcheck="false"></textarea>
+        </div>
+    </div>
+</section> 
+      `;
+  }
 }
 displaycookie();
