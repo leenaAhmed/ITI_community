@@ -90,7 +90,7 @@ var image;
 var time = new Date();
 function addpost() {
   var valueText = textArea.value.trim();
-  if (valueText.length >= 3 || preview.childElementCount >= 1) {
+  if (valueText.length >= 3 || preview.childElementCount != 0) {
     for (var i = 0; i < preview.children.length; i++) {
       image = preview.children[i];
     }
@@ -125,7 +125,7 @@ function addpost() {
 
     </div>
     <div class="users__profile__react">
-        <div onclick="likeFun(this)" class="likeClass"> <i class="far fa-thumbs-up"></i> like</div>
+        <div onclick="likecounter()" class="likeClass"> <i class="far fa-thumbs-up"></i> like</div>
         <div class="commentsClass">
             <i class="fas fa-comments"></i>
             Comment
@@ -145,4 +145,5 @@ function addpost() {
       `;
   }
 }
+
 displaycookie();

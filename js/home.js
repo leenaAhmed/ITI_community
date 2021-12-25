@@ -8,6 +8,7 @@ usersRquet.addEventListener("readystatechange", function () {
     data = JSON.parse(xhr.response);
     var obj = data["posts"];
     displayusers(obj);
+    // onTestChange(me);
   }
 });
 function displayusers(users) {
@@ -49,19 +50,22 @@ function displayusers(users) {
 
       </div>
       <div class="users__profile__react">
-          <div onclick="likeFun(this)" class="likeClass"> <i class="far fa-thumbs-up"></i> like</div>
+          <div onclick="likecounter(this)" class="likeClass"> <i class="far fa-thumbs-up"></i> like</div>
           <div class="commentsClass">
               <i class="fas fa-comments"></i>
               Comment
           </div>
       </div>
-      <div class="users__profile__comments">
-          <div class="users__comment">
+      <div class="users__profile__comments" >
+          <div class="users__profile__newcomments">
+              kl
+           </div>
+           <div class="users__comment">
               <div class="img">
                   <img src="./assest/image/${post.userprofilepic}">
               </div>
               <textarea rows="3" onkeypress="onTestChange(this);" class="post-text"
-                  placeholder="Write a comment.." onkeyup="txtautoheight(this)"
+                  placeholder="Write a comment.." 
                   spellcheck="false"></textarea>
           </div>
       </div>
@@ -73,4 +77,42 @@ function displayusers(users) {
     .join("");
   usersPosts.innerHTML = newPosts;
 }
+var usercomments = document.getElementsByClassName(
+  "users__profile__newcomments"
+);
+function onTestChange(me) {
+  var key = window.event.keyCode;
+  if (key === 13) {
+    var newdiv = document.createElement("div");
+    // perent.insertBefore(newdiv, posts);
+    console.log(me.value);
+    var comContent = me.value;
+    var comm = ` <div class="comment">
+            <div class="img">
+                     <div class="post-text">
+                       <p><b><a style="text-decoration: none;" href="profile.html"  target="_self">
+
+                                  </a></b></p>
+                                  <p>${comContent}</p>
+                              </div>
+                    </div>`;
+    usercomments.innerHTML += comm;
+    me.value = "";
+  } else {
+    return true;
+  }
+}
+// var counter = 0;
+// var likes = document.getElementById("userLikeCounter");
+// var btnLikes = document.getElementsByClassName("likeClass");
+
+// for (var i = 0; i < btn.length; i++) {
+//   console.log("btn ", btn[i]);
+//   // function likecounter() {
+//   //     likes.innerHTML = parseInt(likes.innerHTML) + 1;
+
+//   //     console.log(parseInt(likes.innerHTML));
+//   //   }
+// }
+
 usersRquet.send("");
