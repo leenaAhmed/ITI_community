@@ -41,7 +41,7 @@
 }
 .btn {
   position: absolute;
-  top: 146px;
+  top: 171px;
   background: #c92727;
   color: #ccc;
   padding: 0.25rem 0.35rem;
@@ -55,10 +55,10 @@
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 .next-btn {
-  right: -0.5rem;
+  right: -0.3rem;
 }
 .prev-btn {
-  left: -0.5rem;
+  left: -0.3rem;
 }
 .follow {
   background-color: var(--layout-primary);
