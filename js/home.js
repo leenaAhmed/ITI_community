@@ -126,16 +126,13 @@ function onTestChange(me) {
   }
 }
 // var counter = 0;
-// var likes = document.getElementById("userLikeCounter");
-// var btnLikes = document.getElementsByClassName("likeClass");
+function likecounter(likes) {
+  var likesco = document.getElementById("userLikeCounter");
 
-// for (var i = 0; i < btn.length; i++) {
-//   console.log("btn ", btn[i]);
-//   // function likecounter() {
-//   //     likes.innerHTML = parseInt(likes.innerHTML) + 1;
+  console.log(likes);
+  console.log(parseInt(likesco.innerHTML));
+  likesco.innerHTML = parseInt(likesco.innerHTML) + 1;
+}
 
-//   //     console.log(parseInt(likes.innerHTML));
-//   //   }
-// }
 displaycookie();
 usersRquet.send("");
