@@ -93,27 +93,21 @@ var _profileLnam;
 var profile;
 function displaycookie() {
   var getcookie = getcookies();
-  // console.log(getcookie);
   _profilenam = getcookie["firstName"];
   _profileLnam = getcookie["lastName"];
-  //
   var _newProfileImg = getcookie["EditProfileImg"];
 
   profile = _newProfileImg.replace(/C:\\fakepath\\/g, "");
 
   newProfileImg.src = `/assest/image/${profile}`;
-
-  // console.log(_profilenam);
 }
 function onTestChange(me) {
   var key = window.event.keyCode;
   if (key === 13) {
-    // var newdiv = document.createElement("div");
-    // perent.insertBefore(newdiv, posts);
     console.log(me.value);
     console.log(me.per);
-    var comContent = me.value;
-    var comm = `
+    var commentvalue = me.value;
+    var comment = `
     <div class="users__comment">
             <div class="imguser">
                 <img src="./assest/image/${profile}">
@@ -121,10 +115,10 @@ function onTestChange(me) {
                   ${_profilenam} ${_profileLnam} </a></b></p>
             </div>
             <div class="post-text">
-               <p>${comContent}</p>
+               <p>${commentvalue}</p>
            </div>
          </div>`;
-    me.parentElement.parentElement.innerHTML += comm;
+    me.parentElement.parentElement.innerHTML += comment;
     me.value = "";
     return false;
   } else {
