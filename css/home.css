@@ -1,6 +1,13 @@
 * {
   box-sizing: border-box;
 }
+html {
+  transition: all 0.5s ease-in;
+}
+html.dark {
+  background-color:black;
+  color:white;
+}
 /* container of the page */
 #Container {
   height: auto;
@@ -124,6 +131,20 @@
   padding: 0.5em;
   border-radius: 6px;
   margin-bottom: 20px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: all 0.5s ease-in;
+  
+}
+.users__posts-black{
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+  margin-bottom: 20px;
+  border: 1px solid rgb(85, 85, 85);
+  
 }
 .users_posts-info img {
   width: 50px;
