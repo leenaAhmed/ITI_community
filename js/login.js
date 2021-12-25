@@ -33,7 +33,17 @@ logIn.addEventListener("click", function (e) {
 
     for (var i = 0; i < arr.length; i++) {
       if (arr[i] == email.value) {
-        window.open("profile.html");
+        for( var j=0; j <arr.length; j++){
+          if(arr[j]== passward.value){
+            document.getElementById("wPassward").innerHTML=" ";
+            window.open("profile.html");
+          }else {
+            document.getElementById("wPassward").innerHTML="passward is Wrong";
+            document.getElementById("wPassward").style.color="red"
+          }
+        }
+        
+        
       } /*else{
         if (confirm("you are not have an account/Are you want sign Up? ") == true) {
           window.open("index.html");
