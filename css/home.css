@@ -163,7 +163,6 @@
 .users__profile__react {
   display: flex;
   justify-content: space-around;
-  padding: 15px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
@@ -187,6 +186,16 @@
   border-radius: 7px;
   resize: none;
   padding: 10px;
+}
+
+.commentsClass,
+.likeClass {
+  padding: 10px;
+}
+.likeClass:hover,
+.commentsClass:hover {
+  background-color: rgb(19, 103, 151);
+  color: #fff;
 }
 /* end  users posts style */
 
