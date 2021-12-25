@@ -126,7 +126,7 @@ function addpost() {
     </div>
     <div class="users__profile__react">
         <div onclick="likeFun(this)" class="likeClass"> <i class="far fa-thumbs-up"></i> like</div>
-        <div class="commentsClass>
+        <div class="commentsClass">
             <i class="fas fa-comments"></i>
             Comment
         </div>
