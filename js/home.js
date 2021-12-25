@@ -8,7 +8,7 @@ usersRquet.addEventListener("readystatechange", function () {
     data = JSON.parse(xhr.response);
     var obj = data["posts"];
     displayusers(obj);
-    // onTestChange(me);
+    onTestChange(obj);
   }
 });
 function displayusers(users) {
@@ -57,9 +57,7 @@ function displayusers(users) {
           </div>
       </div>
       <div class="users__profile__comments" >
-          <div class="users__profile__newcomments">
-              kl
-           </div>
+         
            <div class="users__comment">
               <div class="img">
                   <img src="./assest/image/${post.userprofilepic}">
@@ -77,27 +75,59 @@ function displayusers(users) {
     .join("");
   usersPosts.innerHTML = newPosts;
 }
-var usercomments = document.getElementsByClassName(
-  "users__profile__newcomments"
-);
+function getcookies() {
+  var associativeCookie = [];
+  var cookies = document.cookie.split(";"); //
+
+  for (var i = 0; i < cookies.length; i++) {
+    associativeCookie[cookies[i].split("=")[0].trim()] =
+      cookies[i].split("=")[1];
+    console.log(cookies[i].split("=")[1]);
+  }
+  return associativeCookie;
+}
+var newProfileImg = document.getElementById("homeProfileImg");
+var homeprofileImg = document.getElementById("profileFullName");
+var _profilenam;
+var _profileLnam;
+var profile;
+function displaycookie() {
+  var getcookie = getcookies();
+  // console.log(getcookie);
+  _profilenam = getcookie["firstName"];
+  _profileLnam = getcookie["lastName"];
+  homeprofileImg.innerHTML += `${_profilenam} ${_profileLnam} `;
+  //
+  var _newProfileImg = getcookie["EditProfileImg"];
+
+  profile = _newProfileImg.replace(/C:\\fakepath\\/g, "");
+
+  newProfileImg.src = `/assest/image/${profile}`;
+
+  // console.log(_profilenam);
+}
 function onTestChange(me) {
   var key = window.event.keyCode;
   if (key === 13) {
-    var newdiv = document.createElement("div");
+    // var newdiv = document.createElement("div");
     // perent.insertBefore(newdiv, posts);
     console.log(me.value);
+    console.log(me.per);
     var comContent = me.value;
-    var comm = ` <div class="comment">
+    var comm = `
+    <div class="users__comment">
             <div class="img">
-                     <div class="post-text">
-                       <p><b><a style="text-decoration: none;" href="profile.html"  target="_self">
+                <img src="./assest/image/${profile}">
+                <p><b><a style="text-decoration: none;" href="profile.html"  target="_self"> ${_profilenam} ${_profileLnam} </a></b></p>
 
-                                  </a></b></p>
-                                  <p>${comContent}</p>
-                              </div>
-                    </div>`;
-    usercomments.innerHTML += comm;
+            </div>
+            <div class="post-text">
+               <p>${comContent}</p>
+           </div>
+         </div>`;
+    me.parentElement.parentElement.innerHTML += comm;
     me.value = "";
+    return false;
   } else {
     return true;
   }
@@ -114,5 +144,5 @@ function onTestChange(me) {
 //   //     console.log(parseInt(likes.innerHTML));
 //   //   }
 // }
-
+displaycookie();
 usersRquet.send("");
