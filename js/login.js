@@ -23,18 +23,18 @@ logIn.addEventListener("click", function (e) {
   if (email.value.length == 0 || passward.value.length == 0) {
     alert("Invalid your Data!");
   } else {
-    var arr=[];
-    var cookie=document.cookie.split(';');
-    for(var i=0; i<cookie.length; i++){
-      var cookieValue =cookie[i].split("=")[1];
-      console.log(cookieValue)
+    var arr = [];
+    var cookie = document.cookie.split(";");
+    for (var i = 0; i < cookie.length; i++) {
+      var cookieValue = cookie[i].split("=")[1];
+      console.log(cookieValue);
       arr.push(cookieValue);
     }
-    
-    for(var i=0; i<arr.length;i++){
-      if(arr[i] == email.value){
+
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] == email.value) {
         window.open("profile.html");
-      }/*else{
+      } /*else{
         if (confirm("you are not have an account/Are you want sign Up? ") == true) {
           window.open("index.html");
         
@@ -44,13 +44,10 @@ logIn.addEventListener("click", function (e) {
   }
 
   var remember = document.getElementById("remember");
-if(remember.checked){
-  var d = new Date();
-  d.setMonth(d.getMonth() + 6);
-  document.cookie = "UserEmail=" + email.value + ";expires=" + d;
-  document.cookie = "Passwared=" + passward.value + ";expires=" + d;
-}
-
+  if (remember.checked) {
+    var d = new Date();
+    d.setMonth(d.getMonth() + 6);
+    document.cookie = "UserEmail=" + email.value + ";expires=" + d;
+    document.cookie = "Passwared=" + passward.value + ";expires=" + d;
+  }
 });
-
-
