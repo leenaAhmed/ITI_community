@@ -264,15 +264,15 @@
       "content": "this is comment1",
       "postid": 1,
       "userprofilepic": "1.jfif",
-      "userid": 2,
+      "userid": 1,
       "username": "Esraa mohamed",
       "created_at": "1/7/2021, 6:34:33 PM"
     },
     {
       "id": 2,
       "content": "this is comment11",
-      "postid": 1,
-      "userid": 1,
+      "postid": 2,
+      "userid": 2,
       "userprofilepic": "4.jfif",
       "username": "anas ahmed",
       "created_at": "1/7/2021, 5:34:33 PM"
@@ -280,38 +280,29 @@
     {
       "id": 3,
       "content": "this is comment4",
-      "postid": 5,
+      "postid": 3,
       "userprofilepic": "3.jpg",
-      "userid": 6,
+      "userid": 3,
       "username": " Mostafa",
       "created_at": "1/7/2021, 6:34:00 PM"
     },
     {
       "id": 4,
       "content": "this is comment 5",
-      "postid": 5,
-      "userprofilepic": "4.jpg",
-      "userid": 5,
+      "postid": 4,
+      "userprofilepic": "4.jfif",
+      "userid": 4,
       "username": "marwa mohamed",
       "created_at": "1/7/2021, 6:34:00 PM"
     },
     {
       "id": 5,
       "content": "this is comment 6",
-      "postid": 2,
+      "postid": 5,
       "userprofilepic": "5.jpg",
       "userid": 5,
       "username": "lina ",
       "created_at": "1/7/2021, 6:34:00 PM"
     }
-  ],
-  "tags": [
-    "Scientific",
-    "Entertainment",
-    "Data Science",
-    "Big Data",
-    "AI",
-    "CV",
-    "Programming"
   ]
 }

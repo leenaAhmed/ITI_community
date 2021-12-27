@@ -38,7 +38,7 @@ function displayFollowers(followers) {
       <div class="slider__container__card">
       <img src="./assest/image/${profilepic}" alt="" srcset="">
       <h3 class="slider__username"> ${Fristname} ${lastname}</h3>
-      <button class="slider__button__follow follow" onclick="buttonFollower(event)">Follow</button>
+      <button class="slider__button__follow follow" onclick="buttonFollower(this)">Follow</button>
   </div>
        `;
     })
@@ -74,15 +74,16 @@ btnContainer.addEventListener("click", function (e) {
 });
 
 var followerbutton = document.getElementsByClassName("slider__button__follow");
-function buttonFollower(e) {
-  if (e.target.classList.contains("follow")) {
-    e.target.classList.add("unfollow");
-    e.target.classList.remove("follow");
-    e.target.innerHTML = "unfollow";
+function buttonFollower(btn) {
+  console.log(btn.classList);
+  if (btn.classList.contains("follow")) {
+    btn.classList.add("unfollow");
+    btn.classList.remove("follow");
+    btn.innerHTML = "unfollow";
   } else {
-    e.target.classList.add("follow");
-    e.target.classList.remove("unfollow");
-    e.target.innerHTML = "follow";
+    btn.classList.add("follow");
+    btn.classList.remove("unfollow");
+    btn.innerHTML = "follow";
   }
 }
 

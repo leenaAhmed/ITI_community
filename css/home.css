@@ -189,7 +189,7 @@ html.dark {
 }
 .users__comment {
   display: flex;
-
+  border-bottom: 1px solid #ccc;
   align-items: center;
   padding: 10px;
 }
@@ -205,7 +205,7 @@ html.dark {
 }
 
 .post-text {
-  margin-left: 100px;
+  margin-left: 35px;
 }
 .imguser a {
   padding: 0.5em;
