@@ -40,7 +40,7 @@ function setCookie() {
 
   document.cookie = "firstName=" + editname.value + ";expires=" + d;
   document.cookie = "lastName=" + LnameEdite.value + ";expires=" + d;
-  document.cookie = "Email=" + emailEdite.value + ";expires=" + d;
+  document.cookie = "UserEmail=" + emailEdite.value + ";expires=" + d;
   document.cookie = "BIO=" + bioEdite.value + ";expires=" + d;
   document.cookie = "EditProfileImg=" + newProfileImg.value + ";expires=" + d;
   document.cookie = "coverImage=" + coverImg.src + ";expires=" + d;
@@ -53,11 +53,11 @@ function displaycookie() {
   var _lName = getcookie["lastName"];
 
   var _Track = getcookie["Track"];
-  var _Email = getcookie["Email"];
+  var _Email = getcookie["UserEmail"];
   var _bio = getcookie["BIO"];
   var _coverprofile = getcookie["coverImage"];
   var _newProfileImg = getcookie["EditProfileImg"];
-
+  console.log("_newProfileImg", _newProfileImg);
   var profile = _newProfileImg.replace(/C:\\fakepath\\/g, "");
   console.log(profile);
 
@@ -71,8 +71,11 @@ function displaycookie() {
   LnameEdite.value = `${_lName}`;
   emailEdite.value = `${_Email}`;
   bioEdite.value = `${_bio}`;
+  // newProfileImg.value = `${profile}`;
   console.log(_coverprofile);
-  // coverImg.src = `${_coverprofile}`;
+  var cover = _coverprofile.replace("http://127.0.0.1:5501/", "");
+
+  // coverImg.src = `./${cover}`;
   // profileName.innerHTML = `${_profilenam} ${_profileLnam}`;
   // homeprofileImg.src = `/assest/image/${profile}`;
 
@@ -95,15 +98,17 @@ function displaycookie() {
     location.reload(true);
   });
   selectCover.addEventListener("click", function () {
+    setCookie();
     var radio = document.getElementsByName("cvr");
     for (i = 0; i < radio.length; i++) {
-      if (radio[i].checked) var mysrc = radio[i].value;
+      if (radio[i].checked) {
+        var mysrc = radio[i].value;
+      }
     }
-    console.log(mysrc);
-
+    console.log("edit", mysrc);
     coverImg.src = mysrc;
-
     modal.style.display = "none";
+    // location.reload(true);
   });
 }
 

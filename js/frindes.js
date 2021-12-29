@@ -23,3 +23,24 @@ window.addEventListener("DOMContentLoaded", () => {
   var frindes = getFrindesFromStorage();
   frindes.forEach((frind) => getfrindes(frind));
 });
+
+function buttonFollower(btn) {
+  var frinddetails;
+  if (btn.classList.contains("follow")) {
+    btn.classList.add("unfollow");
+    btn.classList.remove("follow");
+    btn.innerHTML = "unfollow";
+    frinddetails = btn.parentElement;
+
+    localStorage.setItem("count", parseInt(flowerercount.innerHTML) + 1);
+  } else {
+    btn.classList.add("follow");
+    btn.classList.remove("unfollow");
+    btn.innerHTML = "follow";
+    localStorage.setItem("count", parseInt(flowerercount.innerHTML) - 1);
+
+    flowerercount.innerHTML = parseInt(flowerercount.innerHTML) - 1;
+  }
+
+  console.log(frinddetails);
+}
