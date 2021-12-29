@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --layout-primary: #e9e6e6;
   --layout-secondary: #0a111a;
   --text-primary: #242627;
@@ -6,7 +6,7 @@
   --background-secondary: #0a111a;
   --btn-hover: #024b88;
   --btn-primary: #3dc01c;
-}
+} */
 .themnavigation {
   color: var(--nav-color);
 }
@@ -99,6 +99,11 @@ a {
   border-radius: 10px;
   box-shadow: 1px 1px 3px #8080807d;
   color: rgb(10, 8, 8);
+}
+.login_form_sign {
+  background-color: var(--layout-secondary);
+  color: rgb(243, 237, 237);
+  width: 150px;
 }
 .img-cont {
   position: relative;

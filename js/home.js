@@ -12,7 +12,6 @@ usersRquet.addEventListener("readystatechange", function () {
 
     displayusers(obj);
     onTestChange(obj);
-    displayComments(comment);
   }
 });
 

@@ -143,7 +143,7 @@ function addpost() {
                       </section>`;
     personalPosts.innerHTML += textpost;
     textArea.value = " ";
-    img.src = " ";
+    preview.innerHTML = " ";
   }
 }
 

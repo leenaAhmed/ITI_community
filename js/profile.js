@@ -1,3 +1,4 @@
+var flowerercount = document.getElementById("profileFollowers");
 // profile variable
 var userFullName = document.getElementById("UserFullName");
 var userTrack = document.getElementById("UserTrack");
@@ -19,6 +20,8 @@ var coverImg = document.getElementById("profileCover");
 var selectCover = document.getElementById("selectCover");
 var path;
 // function changealign
+
+flowerercount.innerHTML = localStorage.getItem("count");
 
 function getcookies() {
   var associativeCookie = [];

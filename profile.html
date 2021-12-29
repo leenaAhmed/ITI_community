@@ -7,10 +7,13 @@
     <title>Profile</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="icon" href="../assest/image/iti-logo.png">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel='stylesheet' href='./css/profile.css'>
+    <link rel="stylesheet" href="./css/login.css" />
     <link rel='stylesheet' href="./css/stylee.css" />
+    <link rel='stylesheet' href='./css/profile.css'>
+
 
 </head>
 
@@ -23,7 +26,7 @@
         <nav id="nav_head">
             <!--put in href the page ypu create !!!-->
             <a href="./home.html" class="iti-bar-item-button">Home</a>
-            <a href="#frindes" class="iti-bar-item-button">Friends</a>
+            <a href="./frindes.html" class="iti-bar-item-button">Friends</a>
             <a href="#profile" class="iti-bar-item-button">Profile</a>
             <a href="index2.html" class="iti-bar-item-button">Logout</a>
             <a id="themnavigation" class="toggle"> <i class="fas fa-moon themnavigation"></i></a>
@@ -38,18 +41,18 @@
         <div class="profile_right_side">
             <div class="img-cont">
                 <img id="ProfileImg" src="./assest/image/1.jpeg">
-                <button id="edit-profile" class="btn">Edit Profile</button>
+                <button id="edit-profile" class="btn">
+                    <i class="fas fa-user-edit cover-button"></i>
+                    Edit Profile</button>
             </div>
-            <div class="profile_data">
-                <p class="grayTxt" id="profile_bio"> </p>
-            </div>
+
             <div class="profile_data">
                 <p class="grayTxt"> Following</p>
-                <p id="profileFolowing"></p>
+                <p id="profileFolowing">0</p>
             </div>
             <div class="profile_data">
                 <p class="grayTxt">Followers</p>
-                <p id="profileFollowers"></p>
+                <p id="profileFollowers">0</p>
             </div>
             <div class="profile_data profile_social_side">
                 <p>
@@ -88,7 +91,7 @@
                             <i class="fa fa-newspaper-o"></i>
                             <i>Feed</i>
                         </a></li>
-                    <li><a href="#myinfo">
+                    <li><a href="#profile_info">
                             <i class="fa fa-info-circle"></i>
                             <i>Info</i>
                         </a></li>
@@ -101,13 +104,8 @@
                     <div class="post line-div">
                         <h3>Overview</h3>
 
-                        <p id="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam
-                            felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur
-                            tincidunt. Vivamus consectetur aliquam lectus commodo viverra. Nunc eu augue nec arcu
-                            efficitur faucibus. Aliquam accumsan ac magna convallis bibendum. Quisque laoreet augue eget
-                            augue fermentum scelerisque. Vivamus dignissim mollis est dictum blandit. Nam porta auctor
-                            neque sed congue. Nullam rutrum eget ex at maximus. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Donec eget vestibulum lorem.</p>
+                        <p class="grayTxt" id="profile_bio"> </p>
+
                         <span id="pic">
 
                         </span>
@@ -161,42 +159,52 @@
             <div class="modal-content edit-modal-content">
                 <span class="close">&times;</span>
                 <h4>Edit profile details</h4>
+                <br />
                 <div class="editform">
-
                     <div class="editforminput">
-                        <label>First Name</label>
-                        <input id="FnameEdite" type="text" name="Fname">
+                        <aside class="sign_up_form_label"> <label>First Name</label></aside>
+                        <aside class="sign_up_form_input"> <input id="FnameEdite" type="text" name="Fname"></aside>
                     </div>
 
                     <div class="editforminput">
-                        <label>Last Name</label></td>
-                        <input id="LnameEdite" type="text" name="Lname">
+                        <aside class="sign_up_form_label"> <label>Last Name</label></aside>
+                        <aside class="sign_up_form_input"><input id="LnameEdite" type="text" name="Lname"></aside>
                     </div>
 
 
                     <div class="editforminput">
-                        <label>Email</label>
-                        <input id="emailEdite" type="email" name="email">
+                        <aside class="sign_up_form_label"><label>Email</label></aside>
+                        <aside class="sign_up_form_input"> <input id="emailEdite" type="email" name="email">
+                        </aside>
                     </div>
 
                     <div class="editforminput">
-                        <label>Bio</label>
-                        <textarea id="bioEdite" name="bio"></textarea>
+                        <aside class="sign_up_form_label"> <label>Bio</label></aside>
+                        <aside class="sign_up_form_input"> <textarea id="bioEdite" name="bio" rows="4"></textarea>
+                        </aside>
+
                     </div>
 
 
                     <div>
-                        <label>Profile Image</label>
-                        <input type="file" id="EditProfileImg" accept="image/*" name="ProfileImg" />
+                        <aside class="sign_up_form_label"> <label>Profile Image</label></aside>
+
+                        <aside class="sign_up_form_input">
+                            <input type="file" id="EditProfileImg" accept="image/*" name="ProfileImg" />
+                        </aside>
                     </div>
 
                 </div>
-                <button class="btn" id="editProfileBtn">Edit</button>
+                <button class="login_form_sign btn" id="editProfileBtn">
+                    Edit
+                </button>
             </div>
         </div>
     </div>
     <script src="./js/model.js"></script>
     <script src="./js/profile.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/dark_mode.js"></script>
     <!-- <script src="./js/home.js"></script> -->
 </body>
 

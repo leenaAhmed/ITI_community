@@ -19,16 +19,17 @@
   margin: 1em;
   border-radius: 0.5em;
   background-color: aliceblue;
+  height: 204px;
 }
 .slider__container__card img {
   width: 100%;
-  height: 60%;
+  height: 40%;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
 }
 .slider__button__follow {
   border: none;
-  width: 90%;
+  width: 100%;
   padding: 0.5em;
   font-size: 1em;
   margin: 0.5em 0;
@@ -38,7 +39,11 @@
 .slider__username {
   padding: 1em;
   font-size: 0.75em;
-  text-align: start;
+  text-align: center;
+}
+.slider__work {
+  padding: 0.5em;
+  font-size: 0.75em;
 }
 .btn {
   position: absolute;
@@ -66,4 +71,33 @@
 }
 .unfollow {
   background-color: #7cde7c;
+}
+#personal-frindes {
+  margin: 50px auto;
+  display: flex;
+  padding-left: 50px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.single__frind {
+  width: 25%;
+  background-color: #fff;
+  text-align: center;
+  height: auto;
+}
+.single__frind img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 0.5em;
+}
+
+.single__frind button {
+  width: 100%;
+  margin: 5px;
+  margin-bottom: 0.5em;
+}
+.container-personal-frindes {
+  margin: 10px auto;
+  text-align: center;
 }

@@ -65,7 +65,7 @@ button:focus {
 a {
   cursor: pointer;
   text-decoration: none;
-  color: var(--layout-secondary);
+  color: var(--color);
 }
 .btn {
   background-color: var(--layout-primary);
