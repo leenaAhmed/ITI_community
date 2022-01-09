@@ -220,6 +220,7 @@ html.dark {
   border: 0;
   outline: 0;
   border: 1px solid #ccc;
+  background-color: var(--card-bg);
   border-radius: 7px;
   resize: none;
   padding: 10px;

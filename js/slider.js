@@ -84,6 +84,7 @@ function buttonFollower(btn) {
     frinddetails = btn.parentElement;
 
     localStorage.setItem("count", parseInt(flowerercount.innerHTML) + 1);
+    flowerercount.innerHTML = parseInt(flowerercount.innerHTML) + 1;
   } else {
     btn.classList.add("follow");
     btn.classList.remove("unfollow");
